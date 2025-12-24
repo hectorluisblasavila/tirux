@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Import.Said</title>
+	<link href="index.css" rel="stylesheet">
+	<link rel="icon" type="image/x-icon" href="productos/favicon.png">
+	<style type="text/css">a { text-decoration: none; color: black;}</style>
+	<link rel="manifest" href="/manifest.json">
+	<script src="stockaros.js?v=1.0.3" type="text/javascript" defer></script>
+	<script src="catalogo.js?v=1.0.3" type="text/javascript" defer></script>
+	<script src="accesoAfiliados.js?v=1.0.3" type="text/javascript" defer></script>
+	<meta property="og:title" content="IMPORT SAID">
+    <meta property="og:description" content="Nos dedicamos a la venta de llantas y aros.">
+    <meta property="og:image" content="https://www.importsaid.com/productos/enlace.png">
+    <meta property="og:url" content="https://www.importsaid.com/">
+    <meta property="og:type" content="website">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+	<meta name="google-adsense-account" content="ca-pub-8825779646931692">
+	<meta name="description" content="Encuentra las mejores llantas y rines en Importsaid. Tenemos marcas como HAIDA, ONYX y BLACKHAWK a los mejores precios en Perú. Compra ahora.">
+
+
+
+
+
+
+	
+</head>
+<body class="pagefull">
+
+<header class="fijo">
+	
+	<div class="toppage">
+	
+		<div class="contac">
+			<img class="iconos" src="productos/phono.png">
+			<div class="info1">
+				<a href="https://wa.me/c/51923435438" target="_blank">923435438</a>
+			</div>
+		</div>
+		<div class="contac">
+			<img class="iconos" src="productos/imbox.png">
+			<div class="info2">
+				<a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=new" target="_blank">said.imbox@gmail.com</a>
+			</div>
+		</div>
+		<div class="contac">
+			<img class="iconos" src="productos/ubicacion.png">
+			<div class="info3">
+				<a href="https://goo.gl/maps/HLfHvN8MkgvP1H4bA" target="_blank">Nuestro Local</a>
+			</div>
+		</div>
+	
+	</div>
+
+
+<div class="cajalogo">
+		
+		<!-- Ícono de perfil que al hacer clic muestra el formulario -->
+<div class="iconoPerfil" onclick="mostrarFormulario()">
+			<!-- Ícono de usuario de Font Awesome -->
+<i class="fas fa-user"></i>
+	<div class="vendedor" onclick="event.stopPropagation();">
+			   <!-- Formulario para ingresar DNI y Clave -->
+		 <input class="acceso" type="text" id="dni" placeholder="DNI">
+	 
+		 <input class="acceso" type="password" id="clave" placeholder="Clave">
+	
+		 <button class="acceso" onclick="validarAcceso()">Acceder</button>
+		 <!-- Botón para cerrar sesión -->
+		 <button class="acceso" onclick="cerrarSesion()">Cerrar</button>
+	 </div>
+</div>
+		
+					<img class="logo" src="productos/logo.png">
+					<div class="social-icons">
+						<a href="https://www.tiktok.com/@said.import" target="_blank" class="icon tiktok">
+						  <i class="fab fa-tiktok"></i>
+						</a>
+						<a href="https://www.instagram.com/import.said_aros_llantas/" target="_blank" class="icon instagram">
+						  <i class="fab fa-instagram"></i>
+						</a>
+						<a href="https://www.facebook.com/SaidImport.Peru" target="_blank" class="icon facebook">
+						  <i class="fab fa-facebook"></i>
+						</a>
+					  </div>
+			
+		</div>
+			<!-- <a class="titulo-filtrar">Filtrar Neumaticos por:</a>-->
+		<a class="titulo-filtrar">Filtrar Aros por:</a>
+		<div class="inputs-container">
+			<div class="filtrar">
+				
+				<div class="top2">
+					<input type="text" class="buscar" id="buscar-producto" onkeyup="buscar()" value placeholder="Diametro" autocomplete="off" name="">
+						
+				</div>
+				<div class="top2">
+					<input type="text" class="buscar" id="pernos-aros" onkeyup="buscar()" value placeholder="Pernos" autocomplete="off" name="">
+					
+				</div>
+				<div class="top2">
+					<input type="text" class="buscar" id="ancho-aros" onkeyup="buscar()" value placeholder="Ancho" autocomplete="off" name="">
+					
+				</div>
+			</div>
+			
+		<!-- 	<div class="filtrar">
+				
+				<div class="top2">
+				<input type="text" class="buscar" id="buscar-llantas" onkeyup="buscarllantas()" value placeholder="Diametro" autocomplete="off" name="">
+					
+				</div>
+
+				<div class="top2">
+				<input type="text" class="buscar" id="ancho-llantas" onkeyup="buscarllantas()" value placeholder="Ancho" autocomplete="off" name="">
+					
+				</div>
+
+				<div class="top2">
+				<input type="text" class="buscar" id="perfil-llantas" onkeyup="buscarllantas()" value placeholder="Perfil" autocomplete="off" name="">
+					
+				</div>
+
+				<div class="top2">
+				<input type="text" class="buscar" id="marca-llantas" onkeyup="buscarllantas()" value placeholder="Marca" autocomplete="off" name="">
+				 
+				</div>	-->
+			
+		</div>		
+		
+	
+</header>
+<a href="index.html" class="boton-llantas">
+	VER LLANTAS
+  </a>
+<button id="boton-flotante-rines">Subir</button>
+<div class="productoall">	
+	<main id="contenedor-aros"></main>
+	<!--<main id="contenedor-llantas"></main>-->
+</div>
+
+
+
+</body>
+</html>	

@@ -1,0 +1,81 @@
+:root {
+    --color-fondo: #f9f9f9;
+    --color-principal: #2a9d8f;
+    --color-secundario: #264653;
+    --color-texto: #333;
+    --font-base: 'Segoe UI', Tahoma, sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background: var(--color-fondo);
+    font-family: var(--font-base);
+    color: var(--color-texto);
+    padding: 20px;
+  }
+
+
+  .imagen {
+    text-align: right;
+    flex: 1 1 300px;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+   h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--color-secundario);
+    text-align: center; /* Centra el texto */
+    margin-top: 10px;    /* Añade separación hacia arriba */
+  }
+
+   p {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    line-height: 1.1;
+    text-align: left;
+  }
+
+  .pedir-whatsapp {
+    background: var(--color-principal);
+    color: #fff;
+    padding: 14px 28px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s;
+    max-width: fit-content;
+    text-align: center;
+  }
+
+  .pedir-whatsapp:hover {
+    background: #21867a;
+  }
+
+  @media (max-width: 768px) {
+    #producto-rines {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+     h2 {
+        align-items: center;
+      font-size: 1.6rem;
+    }
+
+     p {
+        align-items: center;
+      font-size: 1rem;
+    }
+  }
