@@ -41,7 +41,7 @@ const stockllantas = [
 {codigo:"1956515TRI307", Diametro:"15", marca:"TRIANGLE", modelo:"TE307", ancho:"195", Perfil:"65", PR:"", PCD:"0", ET:"0", imagen:"productos/1956515TRI307.webp", cantidad:"0", precio:"185", IC_IV:"91H", alt:"Llanta TRIANGLE 195/65R15"},
 {codigo:"1956515TRI928", Diametro:"15", marca:"TRIANGLE", modelo:"TR928", ancho:"195", Perfil:"65", PR:"", PCD:"0", ET:"0", imagen:"productos/1956515TRI928.webp", cantidad:"0", precio:"215", IC_IV:"91H", alt:"Llanta TRIANGLE 195/65R15"},
 {codigo:"1957015ONY06", Diametro:"15", marca:"ONYX", modelo:"NY-06", ancho:"195", Perfil:"70", PR:"8", PCD:"0", ET:"4", imagen:"productos/1957015ONY06.webp", cantidad:"4", precio:"215", IC_IV:"104/102R", alt:"Llanta ONYX 195/70R15C"},
-{codigo:"2055015TRI918", Diametro:"15", marca:"TRIANGLE", modelo:"TR918", ancho:"205", Perfil:"50", PR:"", PCD:"4", ET:"0", imagen:"productos/2055015TRI918.webp", cantidad:"4", precio:"200", IC_IV:"89V", alt:"Llanta TRIANGLE 205/50R15"},
+{codigo:"2055015TRI918", Diametro:"15", marca:"TRIANGLE", modelo:"TR918", ancho:"205", Perfil:"50", PR:"", PCD:"2", ET:"0", imagen:"productos/2055015TRI918.webp", cantidad:"2", precio:"200", IC_IV:"89V", alt:"Llanta TRIANGLE 205/50R15"},
 {codigo:"2055515LINGHP10", Diametro:"15", marca:"LINGLONG", modelo:"GREEN-MAX HP010", ancho:"205", Perfil:"55", PR:"", PCD:"1", ET:"0", imagen:"productos/2055515LINGHP10.webp", cantidad:"1", precio:"185", IC_IV:"88V", alt:"Llanta LINGLONG 205/55R15"},
 {codigo:"2055515COMBLA", Diametro:"15", marca:"COMPASAL ", modelo:"BLAZER", ancho:"205", Perfil:"55", PR:"", PCD:"0", ET:"4", imagen:"productos/2055515COMBLA.webp", cantidad:"4", precio:"195", IC_IV:"88V", alt:"Llanta COMPASAL  205/55R15"},
 {codigo:"2056015COM510", Diametro:"15", marca:"COMFORSER", modelo:"CF510", ancho:"205", Perfil:"60", PR:"", PCD:"0", ET:"1", imagen:"productos/2056015COM510.webp", cantidad:"1", precio:"185", IC_IV:"91V", alt:"Llanta COMFORSER 205/60R15"},
@@ -62,7 +62,6 @@ const stockllantas = [
 {codigo:"2656517AUSMAS", Diametro:"17", marca:"AUSTONE MT", modelo:"MASPIRE", ancho:"265", Perfil:"65", PR:"10", PCD:"0", ET:"4", imagen:"productos/2656517AUSMAS.webp", cantidad:"4", precio:"420", IC_IV:"120/117Q", alt:"Llanta AUSTONE MT 265/65R17"},
 {codigo:"2657017COM300", Diametro:"17", marca:"COMFORSER MT", modelo:"MASPIRE", ancho:"265", Perfil:"70", PR:"10", PCD:"0", ET:"0", imagen:"productos/2657017COM300.webp", cantidad:"0", precio:"440", IC_IV:"120/117Q", alt:"Llanta COMFORSER MT 265/70R17"},
 {codigo:"2254518ANN606", Diametro:"18", marca:"ANNAITE", modelo:"AN606", ancho:"225", Perfil:"45", PR:"", PCD:"1", ET:"0", imagen:"productos/2254518ANN606.webp", cantidad:"1", precio:"280", IC_IV:"95W", alt:"Llanta ANNAITE 225/45R18"},
-
 
 
 
@@ -128,16 +127,19 @@ document.getElementById('buscar-llantas').addEventListener('input', function () 
 
 // Tabla de Índice de Carga (IC)
 const tablaIC = {
-    "82": "475 kg", "84": "500 kg", "88": "560 kg", "91": "615 kg",
-    "94": "670 kg", "95": "690 kg", "98": "750 kg", "100": "800 kg",
-    "102": "850 kg", "104": "900 kg", "110": "1060 kg", "112": "1120 kg",
-    "121": "1450 kg", "146": "3000 kg", "152": "3550 kg"
+    "73": "365kg", "75": "387kg", "77": "412kg", "79": "437kg",
+    "82": "475kg", "84": "500kg", "86": "530kg", 
+    "87": "545kg", "88": "560kg", "89": "580kg", "91": "615kg", "92": "630kg",
+    "94": "670kg", "95": "690kg", "96": "710kg", "98": "750kg", "99": "775kg", "100": "800kg",
+    "102": "850kg", "104": "900kg", "106": "950kg", "110": "1060kg", 
+    "112": "1120kg", "120": "1400kg", "121": "1450kg", "146": "3000kg", 
+    "152": "3550kg",  
+       
 };
 
 // Tabla de Índice de Velocidad (IV)
 const tablaIV = {
-    "L": "120 km/h", "M": "130 km/h", "N": "140 km/h", "P": "150 km/h",
-    "Q": "160 km/h", "R": "170 km/h", "S": "180 km/h", "T": "190 km/h",
-    "U": "200 km/h", "H": "210 km/h", "V": "240 km/h", "W": "270 km/h", "Y": "300 km/h"
-
+    "L": "120km/h", "M": "130km/h", "N": "140km/h", "P": "150km/h",
+    "Q": "160km/h", "R": "170km/h", "S": "180km/h", "T": "190km/h",
+    "U": "200km/h", "H": "210km/h", "V": "240km/h", "W": "270km/h", "Y": "300km/h"
 };

@@ -2,16 +2,27 @@ const contenedorllantas = document.getElementById('contenedor-llantas');
 const baseURL = "https://www.importsaid.com/";
 
 stockllantas.forEach(producto => {
+    // 1. EXTRAER IC E IV (Maneja formatos como "82H" o "104/102R")
+    // Usamos una expresión regular para separar números de letras
+    const matches = producto.IC_IV.match(/(\d+)\/?(\d+)?([A-Z])/);
+    
+    let textoCarga = "No definido";
+    let textoVelocidad = "No definido";
 
-  // FILTRO AUTOMÁTICO: Si la cantidad es 0 o menor, no crea el elemento
-   // if (producto.cantidad <= 0) {
-       // return; // Salta este producto y sigue con el siguiente
-   // }
+    if (matches) {
+        const icPrincipal = matches[1]; // El primer número (ej. 104)
+        const letraVelocidad = matches[3]; // La letra final (ej. R)
+        
+        // Buscamos en tus objetos tablaIC y tablaIV
+        textoCarga = tablaIC[icPrincipal] || `${icPrincipal} (ver tabla)`;
+        textoVelocidad = tablaIV[letraVelocidad] || letraVelocidad;
+    }
 
+    // 2. CREAR EL ELEMENTO HTML
     const div = document.createElement("div");
     div.classList.add('producto');
     
-    // Guardamos los datos técnicos como atributos del elemento
+    // Guardamos los datos para los filtros
     div.setAttribute('data-ancho', producto.ancho);
     div.setAttribute('data-perfil', producto.Perfil);
     div.setAttribute('data-diametro', producto.Diametro);
@@ -23,18 +34,21 @@ stockllantas.forEach(producto => {
         
         <h3 class="titulop info">Medida: ${producto.ancho}/${producto.Perfil}R${producto.Diametro}</h3>
         <h6 class="info">Marca: ${producto.marca}</h6>
-        <p class="info">Modelo: ${producto.modelo}</p>        
-        <p class="info">PR: ${producto.PR}</p>
+        <p class="info">Modelo: ${producto.modelo}</p>         
+         <p class="info">IC/IV: ${producto.IC_IV}</p> 
+        <p class="info">Soporta: ${textoCarga}/${textoVelocidad}</p>
+        
+        
         <p class="info">Precio: S/.${producto.precio}</p>
         <p class="info">Stock: ${producto.cantidad}</p>
-        </a>
-        <p class="info">Codigo: ${producto.codigo}</p>
-        <p class="precioProductoAfiliado info">Afiliado: S/.${Math.round(producto.precio*0.95/5)*5}</p>
-        <span class="info">Cantidad:</span>
-    
+    </a>
+    <p class="info">Codigo: ${producto.codigo}</p>
+    <p class="precioProductoAfiliado info">Afiliado: S/.${Math.round(producto.precio*0.95/5)*5}</p>
+    <span class="info">Cantidad:</span>
     <input type="number" class="quantity-input" value="1" min="1">
     <button class="boton-agregar">WhatsApp</button>
     `;
+
     contenedorllantas.appendChild(div);
 
 
