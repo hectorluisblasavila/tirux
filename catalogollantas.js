@@ -32,11 +32,11 @@ stockllantas.forEach(producto => {
     <a href="producto.html?id=${producto.codigo}" class="boton-ver"> 
         <img class="imagen" src="${producto.imagen}" alt="${producto.alt}">
         
-        <h3 class="titulop info">Medida: ${producto.ancho}/${producto.Perfil}R${producto.Diametro}</h3>
-        <h6 class="info">Marca: ${producto.marca}</h6>
+        <h3 class="titulop info">${producto.ancho}/${producto.Perfil}R${producto.Diametro}</h3>
+        <h6 class="info">${producto.marca}</h6>
         <p class="info">Modelo: ${producto.modelo}</p>         
          <p class="info">IC/IV: ${producto.IC_IV}</p> 
-        <p class="info">Soporta: ${textoCarga}/${textoVelocidad}</p>
+        <p class="info">${textoCarga}/${textoVelocidad}</p>
         
         
         <p class="info">Precio: S/.${producto.precio}</p>

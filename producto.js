@@ -10,13 +10,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const precioNoDecimales = Math.round(productoSeleccionado.precio / 5) * 5;
 
         detalleContainer.innerHTML = `
-            <h2>${productoSeleccionado.marca} - ${productoSeleccionado.codigo}</h2>
+            <h2>${productoSeleccionado.ancho}/${productoSeleccionado.Perfil}R${productoSeleccionado.Diametro}-${productoSeleccionado.marca}</h2>
             <img class="imagen" src="${productoSeleccionado.imagen}" alt="Imagen de la llanta">
             <p><strong>Diametro:</strong> ${productoSeleccionado.Diametro}</p>
             <p><strong>Ancho:</strong> ${productoSeleccionado.ancho}</p>
             <p><strong>Perfil:</strong> ${productoSeleccionado.Perfil}</p>
+             <p><strong>IC/IV:</strong> ${productoSeleccionado.IC_IV}</p>
             <p><strong>PR:</strong> ${productoSeleccionado.PR}</p>
             <p><strong>Precio:</strong> S/. ${precioNoDecimales}</p>
+           
             <span class="info">Cantidad:</span>
             <input type="number" id="cantidad" class="quantity-input" value="1" min="1">
             <button id="boton-whatsapp" class="pedir-whatsapp">WhatsApp</button>
