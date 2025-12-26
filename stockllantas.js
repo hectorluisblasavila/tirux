@@ -49,7 +49,7 @@ const stockllantas = [
 {codigo:"2157515AUS302", Diametro:"15", marca:"AUSTONE AT", modelo:"ATHENA SP-302", ancho:"215", Perfil:"75", PR:"", PCD:"0", ET:"4", imagen:"productos/2157515AUS302.webp", cantidad:"4", precio:"265", IC_IV:"100T", alt:"Llanta AUSTONE AT 215/75R15"},
 {codigo:"2055016LINMAS", Diametro:"16", marca:"LING LONG", modelo:"COMFORT MASTER", ancho:"205", Perfil:"50", PR:"", PCD:"2", ET:"0", imagen:"productos/2055016LINMAS.webp", cantidad:"2", precio:"195", IC_IV:"87H", alt:"Llanta LING LONG 205/50R16"},
 {codigo:"2055016LIN010", Diametro:"16", marca:"LING LONG", modelo:"GREEN-MAX HP010", ancho:"205", Perfil:"50", PR:"", PCD:"0", ET:"2", imagen:"productos/2055016LIN010.webp", cantidad:"2", precio:"195", IC_IV:"87H", alt:"Llanta LING LONG 205/50R16"},
-{codigo:"2055516TRI968", Diametro:"16", marca:"TRIANGLE", modelo:"TR968 HUELLA V", ancho:"205", Perfil:"55", PR:"", PCD:"1", ET:"0", imagen:"productos/2055516TRI968.webp", cantidad:"1", precio:"230", IC_IV:"91H", alt:"Llanta TRIANGLE 205/55R16"},
+{codigo:"2055516TRI968", Diametro:"16", marca:"TRIANGLE", modelo:"TR968", ancho:"205", Perfil:"55", PR:"", PCD:"1", ET:"0", imagen:"productos/2055516TRI968.webp", cantidad:"1", precio:"230", IC_IV:"91H", alt:"Llanta TRIANGLE 205/55R16"},
 {codigo:"2055516COM510", Diametro:"16", marca:"COMFORSER", modelo:"CF510", ancho:"205", Perfil:"55", PR:"", PCD:"2", ET:"1", imagen:"productos/2055516COM510.webp", cantidad:"3", precio:"185", IC_IV:"91V", alt:"Llanta COMFORSER 205/55R16"},
 {codigo:"2056016COMBLA", Diametro:"16", marca:"COMPASAL", modelo:"BLAZER", ancho:"205", Perfil:"60", PR:"", PCD:"4", ET:"2", imagen:"productos/2056016COMBLA.webp", cantidad:"6", precio:"210", IC_IV:"96H", alt:"Llanta COMPASAL 205/60R16"},
 {codigo:"2056516DOULAN", Diametro:"16", marca:"DOUBLESTAR", modelo:"LANDRIDER DS01", ancho:"205", Perfil:"65", PR:"", PCD:"4", ET:"0", imagen:"productos/2056516DOULAN.webp", cantidad:"4", precio:"220", IC_IV:"99H", alt:"Llanta DOUBLESTAR 205/65R16"},
@@ -139,4 +139,5 @@ const tablaIV = {
     "L": "120 km/h", "M": "130 km/h", "N": "140 km/h", "P": "150 km/h",
     "Q": "160 km/h", "R": "170 km/h", "S": "180 km/h", "T": "190 km/h",
     "U": "200 km/h", "H": "210 km/h", "V": "240 km/h", "W": "270 km/h", "Y": "300 km/h"
+
 };
