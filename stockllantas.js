@@ -4,7 +4,9 @@ const stockllantas = [
     
 
 
-  
+ 
+    
+    
 {codigo:"1557012LINECO", Diametro:"12", marca:"LING LONG", modelo:"GREEN-MAX ECO TOURING", ancho:"155", Perfil:"70", PR:"12", PCD:"2", ET:"0", imagen:"productos/1557012LINECO.webp", cantidad:"2", precio:"125", IC_IV:"73S", alt:"Llanta LING LONG 155/70R12"},
 {codigo:"1656513LINECO", Diametro:"13", marca:"LINGLONG", modelo:"ECO GREEN-MAX", ancho:"165", Perfil:"65", PR:"", PCD:"4", ET:"0", imagen:"productos/1656513LINECO.webp", cantidad:"4", precio:"135", IC_IV:"77T", alt:"Llanta LINGLONG 165/65R13"},
 {codigo:"1757013ONYN8", Diametro:"13", marca:"ONYX", modelo:"NY-806", ancho:"175", Perfil:"70", PR:"", PCD:"0", ET:"0", imagen:"productos/1757013ONYN8.webp", cantidad:"0", precio:"145", IC_IV:"82H", alt:"Llanta ONYX 175/70R13"},
@@ -23,9 +25,9 @@ const stockllantas = [
 {codigo:"1757014COMBLA", Diametro:"14", marca:"COMPASAL", modelo:"BLAZER HP", ancho:"175", Perfil:"70", PR:"", PCD:"2", ET:"0", imagen:"productos/1757014COMBLA.webp", cantidad:"2", precio:"165", IC_IV:"84T", alt:"Llanta COMPASAL 175/70R14"},
 {codigo:"1757014HILGEN", Diametro:"14", marca:"HILO", modelo:"GENESYS", ancho:"175", Perfil:"70", PR:"", PCD:"0", ET:"6", imagen:"productos/1757014HILGEN.webp", cantidad:"6", precio:"165", IC_IV:"84T", alt:"Llanta HILO 175/70R14"},
 {codigo:"1757014TRI928", Diametro:"14", marca:"TRIANGLE", modelo:"TR928", ancho:"175", Perfil:"70", PR:"", PCD:"0", ET:"3", imagen:"productos/1757014TRI928.webp", cantidad:"3", precio:"175", IC_IV:"84T", alt:"Llanta TRIANGLE 175/70R14"},
-{codigo:"1856514COMBLA", Diametro:"14", marca:"COMPASAL", modelo:"BLAZER HP", ancho:"185", Perfil:"65", PR:"", PCD:"3", ET:"0", imagen:"productos/1856514COMBLA.webp", cantidad:"3", precio:"165", IC_IV:"86H", alt:"Llanta COMPASAL 185/65R14"},
+{codigo:"1856514COMBLA", Diametro:"14", marca:"COMPASAL", modelo:"BLAZER HP", ancho:"185", Perfil:"65", PR:"", PCD:"1", ET:"0", imagen:"productos/1856514COMBLA.webp", cantidad:"1", precio:"165", IC_IV:"86H", alt:"Llanta COMPASAL 185/65R14"},
 {codigo:"1856514ROAAX5", Diametro:"14", marca:"ROADKING", modelo:"ARGOS AX5", ancho:"185", Perfil:"65", PR:"", PCD:"0", ET:"3", imagen:"productos/1856514ROAAX5.webp", cantidad:"3", precio:"165", IC_IV:"86H", alt:"Llanta ROADKING 185/65R14"},
-{codigo:"1857014TRIAN928", Diametro:"14", marca:"TRIANGLE", modelo:"TR928", ancho:"185", Perfil:"70", PR:"", PCD:"4", ET:"0", imagen:"productos/1857014TRIAN928.webp", cantidad:"4", precio:"185", IC_IV:"92H", alt:"Llanta TRIANGLE 185/70R14"},
+{codigo:"1857014TRIAN928", Diametro:"14", marca:"TRIANGLE", modelo:"TR928", ancho:"185", Perfil:"70", PR:"", PCD:"3", ET:"0", imagen:"productos/1857014TRIAN928.webp", cantidad:"3", precio:"185", IC_IV:"92H", alt:"Llanta TRIANGLE 185/70R14"},
 {codigo:"1857014ONYX806", Diametro:"14", marca:"ONYX", modelo:"NY-806", ancho:"185", Perfil:"70", PR:"", PCD:"4", ET:"0", imagen:"productos/1857014ONYX806.webp", cantidad:"4", precio:"165", IC_IV:"88H", alt:"Llanta ONYX 185/70R14"},
 {codigo:"1857014LIN300", Diametro:"14", marca:"LINGLONG", modelo:"GREEN-MAX HP300", ancho:"185", Perfil:"70", PR:"", PCD:"0", ET:"2", imagen:"productos/1857014LIN300.webp", cantidad:"2", precio:"165", IC_IV:"88H", alt:"Llanta LINGLONG 185/70R14"},
 {codigo:"1956014HILGEN", Diametro:"14", marca:"HILO", modelo:"GENESYS", ancho:"195", Perfil:"60", PR:"", PCD:"2", ET:"0", imagen:"productos/1956014HILGEN.webp", cantidad:"2", precio:"160", IC_IV:"84T", alt:"Llanta HILO 195/60R14"},
@@ -62,6 +64,8 @@ const stockllantas = [
 {codigo:"2656517AUSMAS", Diametro:"17", marca:"AUSTONE MT", modelo:"MASPIRE", ancho:"265", Perfil:"65", PR:"10", PCD:"0", ET:"4", imagen:"productos/2656517AUSMAS.webp", cantidad:"4", precio:"420", IC_IV:"120/117Q", alt:"Llanta AUSTONE MT 265/65R17"},
 {codigo:"2657017COM300", Diametro:"17", marca:"COMFORSER MT", modelo:"MASPIRE", ancho:"265", Perfil:"70", PR:"10", PCD:"0", ET:"0", imagen:"productos/2657017COM300.webp", cantidad:"0", precio:"440", IC_IV:"120/117Q", alt:"Llanta COMFORSER MT 265/70R17"},
 {codigo:"2254518ANN606", Diametro:"18", marca:"ANNAITE", modelo:"AN606", ancho:"225", Perfil:"45", PR:"", PCD:"1", ET:"0", imagen:"productos/2254518ANN606.webp", cantidad:"1", precio:"280", IC_IV:"95W", alt:"Llanta ANNAITE 225/45R18"},
+
+
 
 
 
