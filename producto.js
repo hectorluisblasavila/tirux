@@ -2,56 +2,60 @@
 document.addEventListener('DOMContentLoaded', () => {
     const params = new URLSearchParams(window.location.search);
     const productoId = params.get('id');
+    
+    // Buscamos el producto en el array stockllantas
     const productoSeleccionado = stockllantas.find(producto => producto.codigo === productoId);
 
     if (productoSeleccionado) {
         const detalleContainer = document.getElementById('producto-detail');
-        const baseURL = "https://www.importsaid.com/";
         const precioNoDecimales = Math.round(productoSeleccionado.precio / 5) * 5;
 
+        // --- REUTILIZANDO TU LÓGICA DE CATALOGOLLANTAS.JS ---
+        // 1. EXTRAER IC E IV (Maneja formatos como "82H" o "104/102R")
+        const matches = productoSeleccionado.IC_IV.match(/(\d+)\/?(\d+)?([A-Z])/);
+        
+        let textoCarga = "No definido";
+        let textoVelocidad = "No definido";
+
+        if (matches) {
+            const icPrincipal = matches[1]; // El primer número (ej. 104)
+            const letraVelocidad = matches[3]; // La letra final (ej. R)
+            
+            // Usamos las tablas que ya están cargadas desde stockllantas.js
+            textoCarga = tablaIC[icPrincipal] || `${icPrincipal} (ver tabla)`;
+            textoVelocidad = tablaIV[letraVelocidad] || letraVelocidad;
+        }
+
+        // 2. INSERTAR EL HTML (Usando tus mismas variables)
         detalleContainer.innerHTML = `
-            <h2>${productoSeleccionado.ancho}/${productoSeleccionado.Perfil}R${productoSeleccionado.Diametro}-${productoSeleccionado.marca}</h2>
+            <h2>Llanta ${productoSeleccionado.ancho}/${productoSeleccionado.Perfil}R${productoSeleccionado.Diametro}  ${productoSeleccionado.marca}</h2>
+            
             <img class="imagen" src="${productoSeleccionado.imagen}" alt="Imagen de la llanta">
-            <p><strong>Diametro:</strong> ${productoSeleccionado.Diametro}</p>
-            <p><strong>Ancho:</strong> ${productoSeleccionado.ancho}</p>
-            <p><strong>Perfil:</strong> ${productoSeleccionado.Perfil}</p>
-             <p><strong>IC/IV:</strong> ${productoSeleccionado.IC_IV}</p>
-            <p><strong>PR:</strong> ${productoSeleccionado.PR}</p>
-            <p><strong>Precio:</strong> S/. ${precioNoDecimales}</p>
-           
-            <span class="info">Cantidad:</span>
-            <input type="number" id="cantidad" class="quantity-input" value="1" min="1">
-            <button id="boton-whatsapp" class="pedir-whatsapp">WhatsApp</button>
+            
+            <div class="info-detallada">
+                <p><strong>Características:</strong></p>
+                <p><strong>🔘 Diametro:</strong> ${productoSeleccionado.Diametro} pulgadas</p>
+                <p><strong>📐 Ancho:</strong> ${productoSeleccionado.ancho} mm</p>
+                <p><strong>📊 Perfil:</strong> ${productoSeleccionado.Perfil} %</p>
+                <p><strong>🏷️ Marca:</strong> ${productoSeleccionado.marca}</p>
+                <p><strong>🏁 Modelo:</strong> ${productoSeleccionado.modelo}</p>
+                <p><strong>📈 IC/IV:</strong> ${productoSeleccionado.IC_IV}</p>
+                <p><strong>Capacidad de Carga:</strong> ${textoCarga}</p>
+                <p><strong>Rango de Velocidad:</strong> ${textoVelocidad}</p>
+                <p><strong>PR:</strong> ${productoSeleccionado.PR}</p>
+                <p>📦 Envíos a nivel nacional 🇵🇪</p>
+                <p>💳 Aceptamos todos los medios de pago (efectivo, tarjeta, transferencias, Yape, Plin) ✅</p>
+                <p>⏰ Atención las 24 horas del día, los 7 días de la semana, los 365 días del año</p>
+                <p>📲 Escríbenos para más información o cotizar tu juego de llantas 💬</p>
+                <p><strong>Precio:</strong> S/. ${precioNoDecimales}</p>
+            </div>
+            
+            <span class="info">Comprar:</span>
+            <input type="number" id="cantidad" class="quantity-input" value="0" min="1">
+            <button id="boton-whatsapp" class="pedir-whatsapp">Consultar por WhatsApp</button>
         `;
-
-        // Ahora sí, agregar el evento después de insertar el contenido
-        const botonWhatsApp = document.getElementById('boton-whatsapp');
-        const cantidadInput = document.getElementById('cantidad');
-
-        botonWhatsApp.addEventListener('click', () => {
-            const cantidad = parseInt(cantidadInput.value);
-            const total = cantidad * precioNoDecimales;
-
-            const mensaje = `Hola, estoy interesado en el siguiente producto:%0A
-- *Diametro:* ${productoSeleccionado.Diametro}%0A
-- *Ancho:* ${productoSeleccionado.ancho}%0A
-- *Perfil:* ${productoSeleccionado.Perfil}%0A
-- *PR:* ${productoSeleccionado.PR}%0A
-- *Marca:* ${productoSeleccionado.marca}%0A
-- *Código:* ${productoSeleccionado.codigo}%0A
-- *Precio:* S/. ${precioNoDecimales}.00%0A
-- *Cantidad:* ${cantidad}%0A
-- *Total:* S/. ${total}.00%0A
-- *Imagen:* ${baseURL}${productoSeleccionado.imagen}%0A
-¿Está disponible?`;
-
-            const numeroWhatsApp = '+51927668906';
-            const url = `https://wa.me/${numeroWhatsApp}?text=${mensaje}`;
-            window.open(url, '_blank');
-        });
     } else {
-        const detalleContainer = document.getElementById('producto-detail');
-        detalleContainer.innerHTML = '<p>Producto no encontrado</p>';
+        document.getElementById('producto-detail').innerHTML = "<h2>Producto no encontrado</h2>";
     }
 });
 

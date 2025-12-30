@@ -1,3 +1,23 @@
+// Tabla de Índice de Carga (IC)
+const tablaIC = {
+    "73": "365kg", "75": "387kg", "77": "412kg", "79": "437kg",
+    "82": "475kg", "84": "500kg", "86": "530kg", 
+    "87": "545kg", "88": "560kg", "89": "580kg", "91": "615kg", "92": "630kg",
+    "94": "670kg", "95": "690kg", "96": "710kg", "98": "750kg", "99": "775kg", "100": "800kg",
+    "102": "850kg", "104": "900kg", "106": "950kg", "110": "1060kg", 
+    "112": "1120kg", "120": "1400kg", "121": "1450kg", "146": "3000kg", 
+    "152": "3550kg",  
+       
+};
+
+// Tabla de Índice de Velocidad (IV)
+const tablaIV = {
+    "L": "120km/h", "M": "130km/h", "N": "140km/h", "P": "150km/h",
+    "Q": "160km/h", "R": "170km/h", "S": "180km/h", "T": "190km/h",
+    "U": "200km/h", "H": "210km/h", "V": "240km/h", "W": "270km/h", "Y": "300km/h"
+};
+
+
 const stockllantas = [
 
  
@@ -129,21 +149,3 @@ document.getElementById('buscar-llantas').addEventListener('input', function () 
 });
 
 
-// Tabla de Índice de Carga (IC)
-const tablaIC = {
-    "73": "365kg", "75": "387kg", "77": "412kg", "79": "437kg",
-    "82": "475kg", "84": "500kg", "86": "530kg", 
-    "87": "545kg", "88": "560kg", "89": "580kg", "91": "615kg", "92": "630kg",
-    "94": "670kg", "95": "690kg", "96": "710kg", "98": "750kg", "99": "775kg", "100": "800kg",
-    "102": "850kg", "104": "900kg", "106": "950kg", "110": "1060kg", 
-    "112": "1120kg", "120": "1400kg", "121": "1450kg", "146": "3000kg", 
-    "152": "3550kg",  
-       
-};
-
-// Tabla de Índice de Velocidad (IV)
-const tablaIV = {
-    "L": "120km/h", "M": "130km/h", "N": "140km/h", "P": "150km/h",
-    "Q": "160km/h", "R": "170km/h", "S": "180km/h", "T": "190km/h",
-    "U": "200km/h", "H": "210km/h", "V": "240km/h", "W": "270km/h", "Y": "300km/h"
-};

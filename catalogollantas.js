@@ -28,24 +28,28 @@ stockllantas.forEach(producto => {
     div.setAttribute('data-diametro', producto.Diametro);
     div.setAttribute('data-marca', producto.marca.toUpperCase());
 
-    div.innerHTML = `
+  // el codigo va dentro de la tarjeta del producto pero lo quite para tener mas limpia la tarjeta <p class="info">${textoCarga}/${textoVelocidad}</p>
+  // el codigo va dentro de la tarjeta del producto pero lo quite para tener mas limpia la tarjeta  <p class="info">Codigo: ${producto.codigo}</p>
+    
+  
+  
+  div.innerHTML = `
     <a href="producto.html?id=${producto.codigo}" class="boton-ver"> 
         <img class="imagen" src="${producto.imagen}" alt="${producto.alt}">
         
-        <h3 class="titulop info">${producto.ancho}/${producto.Perfil}R${producto.Diametro}</h3>
-        <h6 class="info">${producto.marca}</h6>
-        <p class="info">Modelo: ${producto.modelo}</p>         
-         <p class="info">IC/IV: ${producto.IC_IV}</p> 
-        <p class="info">${textoCarga}/${textoVelocidad}</p>
+        <h3 class="titulop info"><strong>${producto.ancho}/${producto.Perfil}R${producto.Diametro} ${producto.IC_IV}</strong></h3>
+        <h6 class="info"><strong>${producto.marca}</strong></h6>
+        <p class="info">${producto.modelo}</p>         
+      
         
         
-        <p class="info">Precio: S/.${producto.precio}</p>
-        <p class="info">Stock: ${producto.cantidad}</p>
+        <h3 class="info"><strong>PRECIO: S/.${producto.precio}</strong></h3>
+        <p class="info"><strong>Stock: </strong>${producto.cantidad}</p>
     </a>
-    <p class="info">Codigo: ${producto.codigo}</p>
+    
     <p class="precioProductoAfiliado info">Afiliado: S/.${Math.round(producto.precio*0.95/5)*5}</p>
-    <span class="info">Cantidad:</span>
-    <input type="number" class="quantity-input" value="1" min="1">
+     <span class="info">Comprar:</span>
+   <input type="number" class="quantity-input" value="0" min="1"></input>
     <button class="boton-agregar">WhatsApp</button>
     `;
 
