@@ -1,5 +1,5 @@
 const contenedorllantas = document.getElementById('contenedor-llantas');
-const baseURL = "https://www.importsaid.com/";
+const baseURL = "https://hectorluisblasavila.github.io/tirux/";
 
 stockllantas.forEach(producto => {
     // 1. EXTRAER IC E IV (Maneja formatos como "82H" o "104/102R")
