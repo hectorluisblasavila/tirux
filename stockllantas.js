@@ -63,7 +63,7 @@ const stockllantas = [
 {codigo:"1956515TRI307", Diametro:"15", marca:"TRIANGLE", modelo:"TE307", ancho:"195", Perfil:"65", PR:"", PCD:"0", ET:"0", imagen:"productos/1956515TRI307.webp", cantidad:"0", precio:"185", IC_IV:"91H", alt:"Llanta TRIANGLE 195/65R15"},
 {codigo:"1956515TRI928", Diametro:"15", marca:"TRIANGLE", modelo:"TR928", ancho:"195", Perfil:"65", PR:"", PCD:"0", ET:"0", imagen:"productos/1956515TRI928.webp", cantidad:"0", precio:"215", IC_IV:"91H", alt:"Llanta TRIANGLE 195/65R15"},
 {codigo:"1957015ONY06", Diametro:"15", marca:"ONYX", modelo:"NY-06", ancho:"195", Perfil:"70", PR:"8", PCD:"0", ET:"4", imagen:"productos/1957015ONY06.webp", cantidad:"4", precio:"215", IC_IV:"104/102R", alt:"Llanta ONYX 195/70R15C"},
-{codigo:"2055015TRI918", Diametro:"15", marca:"TRIANGLE", modelo:"TR918", ancho:"205", Perfil:"50", PR:"", PCD:"2", ET:"0", imagen:"productos/2055015TRI918.webp", cantidad:"2", precio:"200", IC_IV:"89V", alt:"Llanta TRIANGLE 205/50R15"},
+{codigo:"2055015TRI918", Diametro:"15", marca:"TRIANGLE", modelo:"TR918", ancho:"205", Perfil:"50", PR:"", PCD:"2", ET:"0", imagen:"productos/2055015TRI918.webp", cantidad:"1", precio:"200", IC_IV:"89V", alt:"Llanta TRIANGLE 205/50R15"},
 {codigo:"2055515LINGHP10", Diametro:"15", marca:"LINGLONG", modelo:"GREEN-MAX HP010", ancho:"205", Perfil:"55", PR:"", PCD:"1", ET:"0", imagen:"productos/2055515LINGHP10.webp", cantidad:"1", precio:"185", IC_IV:"88V", alt:"Llanta LINGLONG 205/55R15"},
 {codigo:"2055515COMBLA", Diametro:"15", marca:"COMPASAL ", modelo:"BLAZER", ancho:"205", Perfil:"55", PR:"", PCD:"0", ET:"4", imagen:"productos/2055515COMBLA.webp", cantidad:"4", precio:"195", IC_IV:"88V", alt:"Llanta COMPASAL  205/55R15"},
 {codigo:"2056015COM510", Diametro:"15", marca:"COMFORSER", modelo:"CF510", ancho:"205", Perfil:"60", PR:"", PCD:"0", ET:"1", imagen:"productos/2056015COM510.webp", cantidad:"1", precio:"185", IC_IV:"91V", alt:"Llanta COMFORSER 205/60R15"},
@@ -147,6 +147,7 @@ document.getElementById('buscar-llantas').addEventListener('input', function () 
 
     this.value = valor; // Asigna el valor limpio al input
 });
+
 
 
 
