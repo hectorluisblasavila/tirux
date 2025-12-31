@@ -29,7 +29,7 @@ const stockllantas = [
     
 {codigo:"1557012LINECO", Diametro:"12", marca:"LING LONG", modelo:"GREEN-MAX ECO TOURING", ancho:"155", Perfil:"70", PR:"12", PCD:"2", ET:"0", imagen:"productos/1557012LINECO.webp", cantidad:"2", precio:"125", IC_IV:"73S", alt:"Llanta LING LONG 155/70R12"},
 {codigo:"1656513LINECO", Diametro:"13", marca:"LINGLONG", modelo:"ECO GREEN-MAX", ancho:"165", Perfil:"65", PR:"", PCD:"4", ET:"0", imagen:"productos/1656513LINECO.webp", cantidad:"4", precio:"135", IC_IV:"77T", alt:"Llanta LINGLONG 165/65R13"},
-{codigo:"1757013ONYN8", Diametro:"13", marca:"ONYX", modelo:"NY-806", ancho:"175", Perfil:"70", PR:"", PCD:"0", ET:"0", imagen:"productos/1757013ONYN8.webp", cantidad:"0", precio:"145", IC_IV:"82H", alt:"Llanta ONYX 175/70R13"},
+{codigo:"1757013ONYN8", Diametro:"13", marca:"ONYX", modelo:"NY-806", ancho:"175", Perfil:"70", PR:"", PCD:"0", ET:"0", imagen:"productos/1757013ONYN8.png", cantidad:"0", precio:"145", IC_IV:"82H", alt:"Llanta ONYX 175/70R13"},
 {codigo:"1757013TRI928", Diametro:"13", marca:"TRIANGLE", modelo:"TR928", ancho:"175", Perfil:"70", PR:"", PCD:"0", ET:"1", imagen:"productos/1757013TRI928.webp", cantidad:"1", precio:"165", IC_IV:"82H", alt:"Llanta TRIANGLE 175/70R13"},
 {codigo:"1857013DOUMAX", Diametro:"13", marca:"DOUBLESTAR", modelo:"MAXIMUN", ancho:"185", Perfil:"70", PR:"", PCD:"0", ET:"0", imagen:"productos/1857013DOUMAX.webp", cantidad:"0", precio:"135", IC_IV:"86T", alt:"Llanta DOUBLESTAR 185/70R13"},
 {codigo:"1857013ONYN8", Diametro:"13", marca:"ONYX", modelo:"NY-806", ancho:"185", Perfil:"70", PR:"", PCD:"2", ET:"0", imagen:"productos/1857013ONYN8.webp", cantidad:"2", precio:"135", IC_IV:"86H", alt:"Llanta ONYX 185/70R13"},
@@ -147,5 +147,6 @@ document.getElementById('buscar-llantas').addEventListener('input', function () 
 
     this.value = valor; // Asigna el valor limpio al input
 });
+
 
 
