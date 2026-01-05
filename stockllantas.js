@@ -25,11 +25,9 @@ const stockllantas = [
 
 
  
-    
-    
-{codigo:"1557012LINECO", Diametro:"12", marca:"LING LONG", modelo:"GREEN-MAX ECO TOURING", ancho:"155", Perfil:"70", PR:"12", PCD:"2", ET:"0", imagen:"productos/1557012LINECO.webp", cantidad:"2", precio:"125", IC_IV:"73S", alt:"Llanta LING LONG 155/70R12"},
+ {codigo:"1557012LINECO", Diametro:"12", marca:"LING LONG", modelo:"GREEN-MAX ECO TOURING", ancho:"155", Perfil:"70", PR:"12", PCD:"2", ET:"0", imagen:"productos/1557012LINECO.webp", cantidad:"2", precio:"125", IC_IV:"73S", alt:"Llanta LING LONG 155/70R12"},
 {codigo:"1656513LINECO", Diametro:"13", marca:"LINGLONG", modelo:"ECO GREEN-MAX", ancho:"165", Perfil:"65", PR:"", PCD:"4", ET:"0", imagen:"productos/1656513LINECO.webp", cantidad:"4", precio:"135", IC_IV:"77T", alt:"Llanta LINGLONG 165/65R13"},
-{codigo:"1757013ONYN8", Diametro:"13", marca:"ONYX", modelo:"NY-806", ancho:"175", Perfil:"70", PR:"", PCD:"0", ET:"0", imagen:"productos/1757013ONYN8.png", cantidad:"0", precio:"145", IC_IV:"82H", alt:"Llanta ONYX 175/70R13"},
+{codigo:"1757013ONYN8", Diametro:"13", marca:"ONYX", modelo:"NY-806", ancho:"175", Perfil:"70", PR:"", PCD:"0", ET:"0", imagen:"productos/1757013ONYN8.webp", cantidad:"0", precio:"145", IC_IV:"82H", alt:"Llanta ONYX 175/70R13"},
 {codigo:"1757013TRI928", Diametro:"13", marca:"TRIANGLE", modelo:"TR928", ancho:"175", Perfil:"70", PR:"", PCD:"0", ET:"1", imagen:"productos/1757013TRI928.webp", cantidad:"1", precio:"165", IC_IV:"82H", alt:"Llanta TRIANGLE 175/70R13"},
 {codigo:"1857013DOUMAX", Diametro:"13", marca:"DOUBLESTAR", modelo:"MAXIMUN", ancho:"185", Perfil:"70", PR:"", PCD:"0", ET:"0", imagen:"productos/1857013DOUMAX.webp", cantidad:"0", precio:"135", IC_IV:"86T", alt:"Llanta DOUBLESTAR 185/70R13"},
 {codigo:"1857013ONYN8", Diametro:"13", marca:"ONYX", modelo:"NY-806", ancho:"185", Perfil:"70", PR:"", PCD:"2", ET:"0", imagen:"productos/1857013ONYN8.webp", cantidad:"2", precio:"135", IC_IV:"86H", alt:"Llanta ONYX 185/70R13"},
@@ -59,11 +57,11 @@ const stockllantas = [
 {codigo:"1955015COMBL", Diametro:"15", marca:"COMPASAL ", modelo:"BLAZER", ancho:"195", Perfil:"50", PR:"", PCD:"2", ET:"0", imagen:"productos/1955015COMBL.webp", cantidad:"2", precio:"195", IC_IV:"82V", alt:"Llanta COMPASAL  195/50R15"},
 {codigo:"1956015TRIT3", Diametro:"15", marca:"TRIANGLE", modelo:"TE307", ancho:"195", Perfil:"60", PR:"", PCD:"2", ET:"0", imagen:"productos/1956015TRIT3.webp", cantidad:"2", precio:"195", IC_IV:"88V", alt:"Llanta TRIANGLE 195/60R15"},
 {codigo:"1956015COM510", Diametro:"15", marca:"COMFORSER", modelo:"CF510", ancho:"195", Perfil:"60", PR:"", PCD:"0", ET:"4", imagen:"productos/1956015COM510.webp", cantidad:"4", precio:"185", IC_IV:"88H", alt:"Llanta COMFORSER 195/60R15"},
-{codigo:"1956515KAP202", Diametro:"15", marca:"KAPSEN", modelo:"COMFORT MAX A/S H202", ancho:"195", Perfil:"65", PR:"", PCD:"1", ET:"3", imagen:"productos/1956515KAP202.webp", cantidad:"4", precio:"175", IC_IV:"91V", alt:"Llanta KAPSEN 195/65R15"},
+{codigo:"1956515KAP202", Diametro:"15", marca:"KAPSEN", modelo:"COMFORT MAX A/S H202", ancho:"195", Perfil:"65", PR:"", PCD:"0", ET:"3", imagen:"productos/1956515KAP202.webp", cantidad:"3", precio:"175", IC_IV:"91V", alt:"Llanta KAPSEN 195/65R15"},
 {codigo:"1956515TRI307", Diametro:"15", marca:"TRIANGLE", modelo:"TE307", ancho:"195", Perfil:"65", PR:"", PCD:"0", ET:"0", imagen:"productos/1956515TRI307.webp", cantidad:"0", precio:"185", IC_IV:"91H", alt:"Llanta TRIANGLE 195/65R15"},
 {codigo:"1956515TRI928", Diametro:"15", marca:"TRIANGLE", modelo:"TR928", ancho:"195", Perfil:"65", PR:"", PCD:"0", ET:"0", imagen:"productos/1956515TRI928.webp", cantidad:"0", precio:"215", IC_IV:"91H", alt:"Llanta TRIANGLE 195/65R15"},
 {codigo:"1957015ONY06", Diametro:"15", marca:"ONYX", modelo:"NY-06", ancho:"195", Perfil:"70", PR:"8", PCD:"0", ET:"4", imagen:"productos/1957015ONY06.webp", cantidad:"4", precio:"215", IC_IV:"104/102R", alt:"Llanta ONYX 195/70R15C"},
-{codigo:"2055015TRI918", Diametro:"15", marca:"TRIANGLE", modelo:"TR918", ancho:"205", Perfil:"50", PR:"", PCD:"2", ET:"0", imagen:"productos/2055015TRI918.webp", cantidad:"1", precio:"200", IC_IV:"89V", alt:"Llanta TRIANGLE 205/50R15"},
+{codigo:"2055015TRI918", Diametro:"15", marca:"TRIANGLE", modelo:"TR918", ancho:"205", Perfil:"50", PR:"", PCD:"1", ET:"0", imagen:"productos/2055015TRI918.webp", cantidad:"1", precio:"200", IC_IV:"89V", alt:"Llanta TRIANGLE 205/50R15"},
 {codigo:"2055515LINGHP10", Diametro:"15", marca:"LINGLONG", modelo:"GREEN-MAX HP010", ancho:"205", Perfil:"55", PR:"", PCD:"1", ET:"0", imagen:"productos/2055515LINGHP10.webp", cantidad:"1", precio:"185", IC_IV:"88V", alt:"Llanta LINGLONG 205/55R15"},
 {codigo:"2055515COMBLA", Diametro:"15", marca:"COMPASAL ", modelo:"BLAZER", ancho:"205", Perfil:"55", PR:"", PCD:"0", ET:"4", imagen:"productos/2055515COMBLA.webp", cantidad:"4", precio:"195", IC_IV:"88V", alt:"Llanta COMPASAL  205/55R15"},
 {codigo:"2056015COM510", Diametro:"15", marca:"COMFORSER", modelo:"CF510", ancho:"205", Perfil:"60", PR:"", PCD:"0", ET:"1", imagen:"productos/2056015COM510.webp", cantidad:"1", precio:"185", IC_IV:"91V", alt:"Llanta COMFORSER 205/60R15"},
@@ -72,20 +70,18 @@ const stockllantas = [
 {codigo:"2055016LINMAS", Diametro:"16", marca:"LING LONG", modelo:"COMFORT MASTER", ancho:"205", Perfil:"50", PR:"", PCD:"2", ET:"0", imagen:"productos/2055016LINMAS.webp", cantidad:"2", precio:"195", IC_IV:"87H", alt:"Llanta LING LONG 205/50R16"},
 {codigo:"2055016LIN010", Diametro:"16", marca:"LING LONG", modelo:"GREEN-MAX HP010", ancho:"205", Perfil:"50", PR:"", PCD:"0", ET:"2", imagen:"productos/2055016LIN010.webp", cantidad:"2", precio:"195", IC_IV:"87H", alt:"Llanta LING LONG 205/50R16"},
 {codigo:"2055516TRI968", Diametro:"16", marca:"TRIANGLE", modelo:"TR968", ancho:"205", Perfil:"55", PR:"", PCD:"1", ET:"0", imagen:"productos/2055516TRI968.webp", cantidad:"1", precio:"230", IC_IV:"91H", alt:"Llanta TRIANGLE 205/55R16"},
-{codigo:"2055516COM510", Diametro:"16", marca:"COMFORSER", modelo:"CF510", ancho:"205", Perfil:"55", PR:"", PCD:"2", ET:"1", imagen:"productos/2055516COM510.webp", cantidad:"3", precio:"185", IC_IV:"91V", alt:"Llanta COMFORSER 205/55R16"},
+{codigo:"2055516COM510", Diametro:"16", marca:"COMFORSER", modelo:"CF510", ancho:"205", Perfil:"55", PR:"", PCD:"4", ET:"1", imagen:"productos/2055516COM510.webp", cantidad:"5", precio:"185", IC_IV:"91V", alt:"Llanta COMFORSER 205/55R16"},
 {codigo:"2056016COMBLA", Diametro:"16", marca:"COMPASAL", modelo:"BLAZER", ancho:"205", Perfil:"60", PR:"", PCD:"4", ET:"2", imagen:"productos/2056016COMBLA.webp", cantidad:"6", precio:"210", IC_IV:"96H", alt:"Llanta COMPASAL 205/60R16"},
 {codigo:"2056516DOULAN", Diametro:"16", marca:"DOUBLESTAR", modelo:"LANDRIDER DS01", ancho:"205", Perfil:"65", PR:"", PCD:"4", ET:"0", imagen:"productos/2056516DOULAN.webp", cantidad:"4", precio:"220", IC_IV:"99H", alt:"Llanta DOUBLESTAR 205/65R16"},
 {codigo:"2154517BCT800", Diametro:"17", marca:"BCT", modelo:"S800", ancho:"215", Perfil:"45", PR:"", PCD:"2", ET:"0", imagen:"productos/2154517BCT800.webp", cantidad:"2", precio:"250", IC_IV:"91W", alt:"Llanta BCT 215/45ZR17"},
 {codigo:"2154517FUL199", Diametro:"17", marca:"FULLRUN", modelo:"XL HP199", ancho:"215", Perfil:"45", PR:"", PCD:"2", ET:"0", imagen:"productos/2154517FUL199.webp", cantidad:"2", precio:"250", IC_IV:"91W", alt:"Llanta FULLRUN 215/45ZR17"},
 {codigo:"2154517COM700", Diametro:"17", marca:"COMFORSER", modelo:"CF700", ancho:"215", Perfil:"45", PR:"", PCD:"4", ET:"0", imagen:"productos/2154517COM700.webp", cantidad:"4", precio:"200", IC_IV:"91W", alt:"Llanta COMFORSER 215/45ZR17"},
-{codigo:"2254517COM700", Diametro:"17", marca:"COMFORSER", modelo:"CF700", ancho:"225", Perfil:"45", PR:"", PCD:"0", ET:"4", imagen:"productos/2254517COM700.webp", cantidad:"4", precio:"230", IC_IV:"94W", alt:"Llanta COMFORSER 225/45ZR17"},
+{codigo:"2254517COM700", Diametro:"17", marca:"COMFORSER", modelo:"CF700", ancho:"225", Perfil:"45", PR:"", PCD:"1", ET:"4", imagen:"productos/2254517COM700.webp", cantidad:"5", precio:"230", IC_IV:"94W", alt:"Llanta COMFORSER 225/45ZR17"},
 {codigo:"2256517AUS302", Diametro:"17", marca:"AUSTONE AT", modelo:"SP-302", ancho:"225", Perfil:"65", PR:"", PCD:"2", ET:"0", imagen:"productos/2256517AUS302.webp", cantidad:"2", precio:"310", IC_IV:"102H", alt:"Llanta AUSTONE AT 225/65R17"},
 {codigo:"2356517TRI292", Diametro:"17", marca:"TRIANGLE AT", modelo:"TR-292", ancho:"225", Perfil:"65", PR:"", PCD:"0", ET:"0", imagen:"productos/2356517TRI292.webp", cantidad:"0", precio:"350", IC_IV:"104T", alt:"Llanta TRIANGLE AT 225/65R17"},
 {codigo:"2656517AUSMAS", Diametro:"17", marca:"AUSTONE MT", modelo:"MASPIRE", ancho:"265", Perfil:"65", PR:"10", PCD:"0", ET:"4", imagen:"productos/2656517AUSMAS.webp", cantidad:"4", precio:"420", IC_IV:"120/117Q", alt:"Llanta AUSTONE MT 265/65R17"},
 {codigo:"2657017COM300", Diametro:"17", marca:"COMFORSER MT", modelo:"MASPIRE", ancho:"265", Perfil:"70", PR:"10", PCD:"0", ET:"0", imagen:"productos/2657017COM300.webp", cantidad:"0", precio:"440", IC_IV:"120/117Q", alt:"Llanta COMFORSER MT 265/70R17"},
 {codigo:"2254518ANN606", Diametro:"18", marca:"ANNAITE", modelo:"AN606", ancho:"225", Perfil:"45", PR:"", PCD:"1", ET:"0", imagen:"productos/2254518ANN606.webp", cantidad:"1", precio:"280", IC_IV:"95W", alt:"Llanta ANNAITE 225/45R18"},
-
-
 
 
 
@@ -147,7 +143,5 @@ document.getElementById('buscar-llantas').addEventListener('input', function () 
 
     this.value = valor; // Asigna el valor limpio al input
 });
-
-
 
 
