@@ -30,7 +30,22 @@ document.addEventListener('DOMContentLoaded', () => {
         detalleContainer.innerHTML = `
             <h2>Llanta ${productoSeleccionado.ancho}/${productoSeleccionado.Perfil}R${productoSeleccionado.Diametro}  ${productoSeleccionado.marca}</h2>
             
-            <img class="imagen" src="${productoSeleccionado.imagen}" alt="Imagen de la llanta">
+
+
+<div class="galeria-wrapper" style="position: relative; display: flex; align-items: center;">
+    <button class="btn-flecha" onclick="scrollGaleria(-1)" style="left: 5px;">&#10094;</button>
+
+    <div id="galeria-scroll" class="galeria-deslizable">
+        ${productoSeleccionado.imagenes.map(foto => `
+            <img src="${foto}" 
+                 class="foto-slide" 
+                 onerror="this.remove()" 
+                 alt="Imagen de la llanta">
+        `).join('')}
+    </div>
+
+    <button class="btn-flecha" onclick="scrollGaleria(1)" style="right: 5px;">&#10095;</button>
+</div>
             
             <div class="info-detallada">
                 <p><strong>Características:</strong></p>
@@ -88,3 +103,13 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error("Producto no encontrado. No se pueden actualizar las etiquetas OG.");
     }
 }); 
+
+
+function scrollGaleria(direccion) {
+    const contenedor = document.getElementById('galeria-scroll');
+    const anchoImagen = contenedor.clientWidth; // Detecta el ancho de la imagen visible
+    contenedor.scrollBy({
+        left: direccion * anchoImagen,
+        behavior: 'smooth' // Hace que el movimiento sea fluido
+    });
+}

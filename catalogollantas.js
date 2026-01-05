@@ -35,7 +35,7 @@ stockllantas.forEach(producto => {
   
   div.innerHTML = `
     <a href="producto.html?id=${producto.codigo}" class="boton-ver"> 
-        <img class="imagen" src="${producto.imagen}" alt="${producto.alt}">
+       <img class="imagen" src="${producto.imagenes[0]}" alt="${producto.alt}">
         
         <h3 class="titulop info"><strong>${producto.ancho}/${producto.Perfil}R${producto.Diametro} ${producto.IC_IV}</strong></h3>
         <h6 class="info"><strong>${producto.marca}</strong></h6>
@@ -78,7 +78,7 @@ stockllantas.forEach(producto => {
         - *Cantidad:* ${cantidad}%0A
         - *Total:* S/. ${total}.00%0A
         - *Imagen:* ${baseURL}${producto.imagen}%0A
-        ¿Está disponible?`;
+        `;
 
         // Número de WhatsApp (reemplaza con el tuyo)
         const numeroWhatsApp = '+51927668906'; // Incluye el código del país

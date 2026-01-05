@@ -20,7 +20,7 @@
   }
 
 
-  .imagen {
+  .foto-slide {
     text-align: right;
     flex: 1 1 300px;
     max-width: 100%;
@@ -81,3 +81,34 @@
   }
 
 
+
+.galeria-deslizable {
+    display: flex;
+    overflow-x: hidden; /* Ocultamos la barra para que solo se use la flecha */
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+
+.btn-flecha {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro transparente */
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.btn-flecha:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
