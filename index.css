@@ -333,13 +333,22 @@
     justify-items: center;    
 }
 
-#contenedor-llantas{
+#contenedor-llantas {
     margin: 1%;
-    width: 100%;
+    width: 98%; /* Ajustado para que el margen no desborde */
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(165px, 165px));
-    justify-content: space-evenly;
+    /* Por defecto para celulares: 2 columnas iguales */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px; /* Espacio entre tarjetas */
     justify-items: center;    
+}
+
+/* Para tablets y computadoras (cuando la pantalla es más grande de 600px) */
+@media (min-width: 600px) {
+    #contenedor-llantas {
+        /* Aquí vuelve a ser automático para que quepan muchas más */
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
 }
 
 
