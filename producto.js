@@ -91,15 +91,26 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
- function copiarCualquierTexto(idElemento) {
-    // Busca el elemento según el ID que le pases desde el botón
+
+function copiarCualquierTexto(idElemento) {
+    // 1. Buscamos el texto
     const elemento = document.getElementById(idElemento);
-    
+    // 2. Buscamos el botón que lanzó el evento
+    const boton = event.currentTarget;
+    const iconoOriginal = boton.innerHTML;
+
     if (elemento) {
-        const texto = elemento.innerText;
-        navigator.clipboard.writeText(texto).then(() => {
-            // Mensaje de confirmación
-            alert("Copiado al portapapeles");
+        navigator.clipboard.writeText(elemento.innerText).then(() => {
+            // AÑADIR EFECTOS VISUALES
+            boton.classList.add('copiado'); // Cambia color y opacidad
+            boton.innerHTML = "<span>✅</span>"; // Cambia icono
+
+            // QUITAR EFECTOS después de 1.5 segundos
+            setTimeout(() => {
+                boton.classList.remove('copiado');
+                boton.innerHTML = iconoOriginal;
+            }, 1500);
+            
         }).catch(err => {
             console.error('Error al copiar: ', err);
         });

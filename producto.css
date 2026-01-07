@@ -178,38 +178,29 @@
     }
 }
 
-
-/* Estilo base para el botón de copiar */
+/* Botón Profesional */
 .btn-copiar {
     background-color: #ffffff;
     border: 1px solid #e0e0e0;
     border-radius: 6px;
-    color: #333;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     padding: 8px;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease; /* Animación suave */
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-/* Efecto al pasar el mouse */
 .btn-copiar:hover {
     background-color: #f8f9fa;
-    border-color: #d0d0d0;
     transform: translateY(-1px);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-/* Efecto al hacer clic */
-.btn-copiar:active {
-    transform: translateY(0);
-    background-color: #f0f0f0;
-    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
-}
-
-/* Tamaño del emoji dentro del botón */
-.btn-copiar span {
-    font-size: 1.2rem;
+/* Estado cuando ya se hizo clic (Copiado) */
+.btn-copiar.copiado {
+    background-color: #e8f5e9; /* Verde muy clarito */
+    border-color: #a5d6a7;
+    opacity: 0.7; /* Baja la opacidad */
+    transform: scale(0.95); /* Se encoge un poquito */
 }
