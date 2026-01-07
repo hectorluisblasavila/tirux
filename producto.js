@@ -28,8 +28,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 2. INSERTAR EL HTML (Usando tus mismas variables)
         detalleContainer.innerHTML = `
-            <h2>Llanta ${productoSeleccionado.ancho}/${productoSeleccionado.Perfil}R${productoSeleccionado.Diametro}  ${productoSeleccionado.marca}</h2>
-            
+            <div style="display: flex; align-items: center; gap: 10px;">
+  <h2 id="tituloACopiar" style="margin: 0;">
+    Llanta ${productoSeleccionado.ancho}/${productoSeleccionado.Perfil}R${productoSeleccionado.Diametro} ${productoSeleccionado.marca}
+  </h2>
+  <button class="btn-copiar" onclick="copiarCualquierTexto('tituloACopiar')" title="Copiar Título">
+  <span>📋</span>
+</button>
+  
+</div>
 
 <div class="producto-contenedor-flex">
 <div class="galeria-wrapper" style="position: relative; display: flex; align-items: center;">
@@ -47,27 +54,33 @@ document.addEventListener('DOMContentLoaded', () => {
     <button class="btn-flecha" onclick="scrollGaleria(1)" style="right: 5px;">&#10095;</button>
 </div>
             
-            <div class="info-detallada">
-                <p><strong>Características:</strong></p>
-                <p><strong>🔘 Diametro:</strong> ${productoSeleccionado.Diametro} pulgadas</p>
-                <p><strong>📐 Ancho:</strong> ${productoSeleccionado.ancho} mm</p>
-                <p><strong>📊 Perfil:</strong> ${productoSeleccionado.Perfil} %</p>
-                <p><strong>🏷️ Marca:</strong> ${productoSeleccionado.marca}</p>
-                <p><strong>🏁 Modelo:</strong> ${productoSeleccionado.modelo}</p>
-                <p><strong>📈 IC/IV:</strong> ${productoSeleccionado.IC_IV}</p>
-                <p><strong>Capacidad de Carga:</strong> ${textoCarga}</p>
-                <p><strong>Rango de Velocidad:</strong> ${textoVelocidad}</p>
-                <p><strong>PR:</strong> ${productoSeleccionado.PR}</p>
-                <p>📦 Envíos a nivel nacional 🇵🇪</p>
-                <p>💳 Aceptamos todos los medios de pago (efectivo, tarjeta, transferencias, Yape, Plin) ✅</p>
-                <p>⏰ Atención las 24 horas del día, los 7 días de la semana, los 365 días del año</p>
-                <p>📲 Escríbenos para más información o cotizar tu juego de llantas 💬</p>
-                <p><strong>Precio:</strong> S/. ${precioNoDecimales}</p>
+           <div class="info-detallada">
+    <div id="infoACopiar">
+        <p><strong>Características:</strong></p>
+        <p><strong>🔘 Diametro:</strong> ${productoSeleccionado.Diametro} pulgadas</p>
+        <p><strong>📐 Ancho:</strong> ${productoSeleccionado.ancho} mm</p>
+        <p><strong>📊 Perfil:</strong> ${productoSeleccionado.Perfil} %</p>
+        <p><strong>🏷️ Marca:</strong> ${productoSeleccionado.marca}</p>
+        <p><strong>🏁 Modelo:</strong> ${productoSeleccionado.modelo}</p>
+        <p><strong>📈 IC/IV:</strong> ${productoSeleccionado.IC_IV}</p>
+        <p><strong>Capacidad de Carga:</strong> ${textoCarga}</p>
+        <p><strong>Rango de Velocidad:</strong> ${textoVelocidad}</p>
+        <p><strong>PR:</strong> ${productoSeleccionado.PR}</p>
+        <p>📦 Envíos a nivel nacional 🇵🇪</p>
+        <p>💳 Aceptamos todos los medios de pago (efectivo, tarjeta, transferencias, Yape, Plin) ✅</p>
+        <p>⏰ Atención las 24 horas del día, los 7 días de la semana, los 365 días del año</p>
+        <p>📲 Escríbenos para más información o cotizar tu juego de llantas 💬</p>
+    </div>
 
-                <span class="info">Comprar:</span>
-            <input type="number" id="cantidad" class="quantity-input" value="0" min="1">
-            <button id="boton-whatsapp" class="pedir-whatsapp">Consultar por WhatsApp</button>
-            </div>
+  <button class="btn-copiar" onclick="copiarCualquierTexto('infoACopiar')" title="Copiar Características">
+  <span>📋</span>
+</button>
+
+    <p><strong>Precio:</strong> S/. ${precioNoDecimales}</p>
+    <span class="info">Comprar:</span>
+    <input type="number" id="cantidad" class="quantity-input" value="0" min="1">
+    <button id="boton-whatsapp" class="pedir-whatsapp">Consultar por WhatsApp</button>
+</div>
             
             
 </div> 
@@ -78,6 +91,20 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+ function copiarCualquierTexto(idElemento) {
+    // Busca el elemento según el ID que le pases desde el botón
+    const elemento = document.getElementById(idElemento);
+    
+    if (elemento) {
+        const texto = elemento.innerText;
+        navigator.clipboard.writeText(texto).then(() => {
+            // Mensaje de confirmación
+            alert("Copiado al portapapeles");
+        }).catch(err => {
+            console.error('Error al copiar: ', err);
+        });
+    }
+}
 
    
 
@@ -116,3 +143,5 @@ function scrollGaleria(direccion) {
         behavior: 'smooth' // Hace que el movimiento sea fluido
     });
 }
+
+
