@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <h2>Llanta ${productoSeleccionado.ancho}/${productoSeleccionado.Perfil}R${productoSeleccionado.Diametro}  ${productoSeleccionado.marca}</h2>
             
 
-
+<div class="producto-contenedor-flex">
 <div class="galeria-wrapper" style="position: relative; display: flex; align-items: center;">
     <button class="btn-flecha" onclick="scrollGaleria(-1)" style="left: 5px;">&#10094;</button>
 
@@ -63,11 +63,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p>⏰ Atención las 24 horas del día, los 7 días de la semana, los 365 días del año</p>
                 <p>📲 Escríbenos para más información o cotizar tu juego de llantas 💬</p>
                 <p><strong>Precio:</strong> S/. ${precioNoDecimales}</p>
-            </div>
-            
-            <span class="info">Comprar:</span>
+
+                <span class="info">Comprar:</span>
             <input type="number" id="cantidad" class="quantity-input" value="0" min="1">
             <button id="boton-whatsapp" class="pedir-whatsapp">Consultar por WhatsApp</button>
+            </div>
+            
+            
+</div> 
         `;
     } else {
         document.getElementById('producto-detail').innerHTML = "<h2>Producto no encontrado</h2>";

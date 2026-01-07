@@ -20,14 +20,7 @@
   }
 
 
-  .foto-slide {
-    text-align: right;
-    flex: 1 1 300px;
-    max-width: 100%;
-    object-fit: contain;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
+
 
    h2 {
     font-size: 2rem;
@@ -82,33 +75,105 @@
 
 
 
+/* --- COMPORTAMIENTO DE UNA FOTO A LA VEZ --- */
 .galeria-deslizable {
     display: flex;
-    overflow-x: hidden; /* Ocultamos la barra para que solo se use la flecha */
+    overflow-x: hidden; /* Evita que se vean las demás fotos */
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
+    width: 100%;
+}
+
+.foto-slide {
+    min-width: 100%; /* Ocupa todo el contenedor, empujando a las otras */
+    width: 100%;
+    height: auto;
+    scroll-snap-align: start;
+    object-fit: contain;
+}
+
+/* --- DISEÑO DE DOS COLUMNAS (PC Y CELULAR HORIZONTAL) --- */
+@media (min-width: 480px) and (orientation: landscape), (min-width: 992px) {
+    .producto-contenedor-flex {
+        display: flex;
+        align-items: flex-start; /* Alinea arriba */
+        gap: 30px;               /* Espacio entre foto y texto */
+        padding: 20px;
+    }
+
+    .galeria-wrapper {
+        flex: 0 0 50%;           /* La galería ocupa la mitad del ancho */
+        max-width: 600px;        /* Evita que sea gigante en monitores */
+    }
+
+    .informacion-producto {
+        flex: 1;                 /* La descripción ocupa el resto */
+        text-align: left;        /* Mejor lectura en PC */
+    }
+}
+
+/* Estilo para los botones (asegurar posición) */
+.galeria-wrapper {
+    position: relative;
     width: 100%;
 }
 
 
 .btn-flecha {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro transparente */
-    color: white;
+    top: 50%;
+    transform: translateY(-50%); /* Centrado vertical exacto */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
+    color: #333; /* Icono gris oscuro */
     border: none;
-    font-size: 24px;
-    padding: 10px;
+    font-size: 20px;
+    width: 44px;
+    height: 44px;
     cursor: pointer;
     z-index: 10;
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
+    border-radius: 50%; /* Botón circular */
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background 0.3s;
+    
+    /* Sombra suave para dar profundidad */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    
+    /* Transición suave para el efecto Hover */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Evita que el usuario seleccione el texto de la flecha al hacer clic rápido */
+    user-select: none;
 }
 
+/* Efecto al pasar el mouse */
 .btn-flecha:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #ffffff;
+    color: #000;
+    transform: translateY(-50%) scale(1.1); /* Crece un poquito */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Efecto al hacer clic */
+.btn-flecha:active {
+    transform: translateY(-50%) scale(0.95); /* Se hunde ligeramente */
+}
+
+/* Ajuste de posición para que no estén pegadas al borde */
+.btn-flecha[style*="left"] {
+    left: 15px !important;
+}
+
+.btn-flecha[style*="right"] {
+    right: 15px !important;
+}
+
+/* Opcional: Hacerlas un poco más pequeñas en móviles */
+@media (max-width: 480px) {
+    .btn-flecha {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+        background-color: rgba(255, 255, 255, 0.7); /* Más transparentes en móvil */
+    }
 }
