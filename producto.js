@@ -55,6 +55,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         <p><strong>Rango de Velocidad:</strong> ${textoVelocidad}</p>
                         <p><strong>PR:</strong> ${productoSeleccionado.PR}</p>
                         <p>📦 Envíos a nivel nacional 🇵🇪</p>
+                        <p>💳 Aceptamos todos los medios de pago (efectivo, tarjeta, transferencias, Yape, Plin) ✅</p>
+                        <p>⏰ Atención las 24 horas del día, los 7 días de la semana, los 365 días del año</p>
+                        <p>📲 Escríbenos para más información o cotizar tu juego de llantas 💬</p>
                     </div>
 
                     <button class="btn-copiar" onclick="copiarCualquierTexto('infoACopiar')" title="Copiar Características">

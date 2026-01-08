@@ -204,3 +204,17 @@
     opacity: 0.7; /* Baja la opacidad */
     transform: scale(0.95); /* Se encoge un poquito */
 }
+
+
+.quantity-input {
+    width: 30px;
+    height: 20px;
+    font-size: 14px;    
+    color: #000000; /* Texto en azul */
+    background-color: #ffffff; /* Fondo blanco */
+    border: none; /* Borde azul */
+    border-radius: 5px; /* Bordes redondeados */
+    text-align: center; /* Texto centrado */
+    outline: none; /* Sin borde al hacer clic */
+    
+  }
