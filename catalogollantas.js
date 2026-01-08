@@ -43,7 +43,8 @@ stockllantas.forEach(producto => {
       
         
         
-        <h3 class="info"><strong>PRECIO: S/.${producto.precio}</strong></h3>
+       
+<h3 class="info precio-destacado"><strong>PRECIO: S/.${producto.precio}</strong></h3> 
         <p class="info"><strong>Stock: </strong>${producto.cantidad}</p>
     </a>
     
