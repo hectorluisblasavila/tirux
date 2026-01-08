@@ -1,5 +1,5 @@
 const contenedorllantas = document.getElementById('contenedor-llantas');
-const baseURL = "https://hectorluisblasavila.github.io/tirux/";
+
 
 stockllantas.forEach(producto => {
     // 1. EXTRAER IC E IV (Maneja formatos como "82H" o "104/102R")
@@ -48,6 +48,7 @@ stockllantas.forEach(producto => {
     </a>
     
     <p class="precioProductoAfiliado info">Afiliado: S/.${Math.round(producto.precio*0.95/5)*5}</p>
+    <p class="info">Codigo: ${producto.codigo}</p>
      <span class="info">Comprar:</span>
    <input type="number" class="quantity-input" value="0" min="1"></input>
     <button class="boton-agregar">WhatsApp</button>
@@ -56,38 +57,41 @@ stockllantas.forEach(producto => {
     contenedorllantas.appendChild(div);
 
 
-    // Aquí agregamos el evento a cada botón de WhatsApp dinámicamente
-    const botonAgregar = div.querySelector('.boton-agregar');
-    botonAgregar.addEventListener('click', () => {
-        // Obtener la cantidad seleccionada
+   // Aquí agregamos el evento a cada botón de WhatsApp dinámicamente
+const botonAgregar = div.querySelector('.boton-agregar');
+
+botonAgregar.addEventListener('click', () => {
+    // 1. Obtener y validar la cantidad seleccionada
     const cantidadInput = div.querySelector('.quantity-input');
-    const cantidad = parseInt(cantidadInput.value);
-      const precioNoDecimales = Math.round(producto.precio/5)*5;
-    // Calcular el total
-    const total = cantidad * precioNoDecimales;
-  
-        // Crear el mensaje de WhatsApp con los datos del producto
-        const mensaje = `Hola, estoy interesado en el siguiente producto:%0A
-        - *Diametro:* ${producto.Diametro}%0A
-        - *Ancho:* ${producto.ancho}%0A
-        - *Perfil:* ${producto.Perfil}%0A
-        - *PR:* ${producto.PR}%0A
-        - *Marca:* ${producto.marca}%0A
-        - *Código:* ${producto.codigo}%0A
-        - *Precio:* S/. ${producto.precio}.00%0A
-        - *Cantidad:* ${cantidad}%0A
-        - *Total:* S/. ${total}.00%0A
-        - *Imagen:* ${baseURL}${producto.imagen}%0A
-        `;
+    const cantidad = parseInt(cantidadInput.value) || 1; // Por defecto 1 si hay error
 
-        // Número de WhatsApp (reemplaza con el tuyo)
-        const numeroWhatsApp = '+51927668906'; // Incluye el código del país
+    // 2. Lógica de redondeo y cálculo (según tu código original)
+    const precioUnitario = Math.round(producto.precio / 5) * 5;
+    const total = cantidad * precioUnitario;
 
-        // Generar el enlace para WhatsApp
-        const url = `https://wa.me/${numeroWhatsApp}?text=${mensaje}`;
+    // 3. Construir la URL del producto usando el código como ID
+    const urlProducto = `https://hectorluisblasavila.github.io/tirux/producto.html?id=${producto.codigo}`;
 
-        // Abrir WhatsApp en una nueva pestaña
-        window.open(url, '_blank');
+    // 4. Crear el mensaje con emojis y formato de negritas
+    // Nota: Usamos encodeURIComponent para que los caracteres especiales y espacios funcionen siempre
+    const mensajeTexto = `*¡Hola! Nuevo Pedido* %0A%0A` +
+        `*Producto:* ${producto.ancho}/${producto.Perfil}R${producto.Diametro} ${producto.IC_IV}%0A` +
+        `*Marca:* ${producto.marca} %0A` +
+        `*Modelo:* ${producto.modelo}%0A` +
+        `*Código:* \`${producto.codigo}\`%0A%0A` +
+        `--------------------------%0A` +
+        `*Precio Unit:* S/. ${precioUnitario}.00%0A` +
+        `*Cantidad:* ${cantidad} unidades%0A` +
+        `*TOTAL:* S/. ${total}.00 %0A` +
+        `--------------------------%0A%0A` +
+        `*Link del producto:* ${urlProducto}`;
+
+    // 4. Número de WhatsApp
+    const numeroWhatsApp = '51927668906'; 
+
+    // 5. Generar URL y abrir
+    const url = `https://wa.me/${numeroWhatsApp}?text=${mensajeTexto}`;
+    window.open(url, '_blank');
     });
 });
 
