@@ -304,14 +304,7 @@
     
 }
 
-/* Este efecto solo se ejecutará en dispositivos con MOUSE (PC/Laptop) */
-@media (hover: hover) {
-    .imagen:hover {
-        transition: all ease-in-out .6s;
-        transform: scale(1.09);
-        border-radius: 15%;
-    }
-}
+
 
 .precioProducto{
    margin-top: 5px;
@@ -443,3 +436,4 @@ header label:hover{
 
 
     
+
