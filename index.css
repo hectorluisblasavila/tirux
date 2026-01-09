@@ -363,7 +363,7 @@ header label{
     padding-left: 10px;
 }
 
-header label:hover{
+header label:hover{ 
     cursor: pointer;
     opacity: .9;
 
@@ -435,3 +435,7 @@ header label:hover{
        font-weight: bold;
        margin: 5px;
     }
+
+
+
+    

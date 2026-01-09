@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <button class="btn-flecha" onclick="scrollGaleria(-1)" style="left: 5px;">&#10094;</button>
                     <div id="galeria-scroll" class="galeria-deslizable">
                         ${productoSeleccionado.imagenes.map(foto => `
-                            <img src="${foto}" class="foto-slide" onerror="this.remove()" alt="Imagen de la llanta">
+                            <img src="${foto}" class="foto-slide" style="padding-bottom: 15px;" onerror="this.remove()" alt="Imagen de la llanta">
                         `).join('')}
                     </div>
                     <button class="btn-flecha" onclick="scrollGaleria(1)" style="right: 5px;">&#10095;</button>

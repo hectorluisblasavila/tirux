@@ -219,11 +219,9 @@
     
   }
 
-  /* Deshabilitar las flechas (para navegadores compatibles) */
+    /* Deshabilitar las flechas (para navegadores compatibles) */
    input[type="number"]::-webkit-inner-spin-button,
    input[type="number"]::-webkit-outer-spin-button {
      appearance: none;
      margin: 0;
    }
-
-
