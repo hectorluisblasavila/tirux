@@ -87,57 +87,5 @@ const stockllantas = [
 ];
 
 
-const buscarllantas = () => {
-    const textoDiametro = document.getElementById('buscar-llantas').value;
-    const textoAncho = document.getElementById('ancho-llantas').value;
-    const textoPerfil = document.getElementById('perfil-llantas').value;
-    const textoMarca = document.getElementById('marca-llantas').value.toUpperCase();
-
-    const contenedorProductos = document.getElementById('contenedor-llantas');
-    const productos = contenedorProductos.querySelectorAll(".producto");
-
-    productos.forEach(producto => {
-        // Leemos los valores directamente de los atributos data que creamos arriba
-        const valorAncho = producto.getAttribute('data-ancho') || "";
-        const valorPerfil = producto.getAttribute('data-perfil') || "";
-        const valorDiametro = producto.getAttribute('data-diametro') || "";
-        const valorMarca = producto.getAttribute('data-marca') || "";
-
-        // Verificamos coincidencias
-        const coincideAncho = valorAncho.includes(textoAncho);
-        const coincidePerfil = valorPerfil.includes(textoPerfil);
-        const coincideDiametro = valorDiametro.includes(textoDiametro);
-        const coincideMarca = valorMarca.includes(textoMarca);
-
-        // Lógica de visualización
-        if ((textoDiametro === "" || coincideDiametro) && 
-            (textoAncho === "" || coincideAncho) && 
-            (textoPerfil === "" || coincidePerfil) && 
-            (textoMarca === "" || coincideMarca)) {
-            producto.style.display = ""; 
-        } else {
-            producto.style.display = "none";
-        }
-    });
-};
-
-
-
-//solo permite ingresar numeros entre un rando de 12 a 22
-
-document.getElementById('buscar-llantas').addEventListener('input', function () {
-    let valor = this.value.replace(/\D/g, ''); // Elimina todo lo que no sea número
-
-    if (valor.length > 2) { 
-        valor = valor.slice(0, 2); // Solo deja los primeros dos dígitos
-    }
-
-    if (valor.length === 2 && (parseInt(valor) < 12 || parseInt(valor) > 22)) { 
-        alert("Solo se permiten números entre 12 y 22.");
-        valor = ''; // Borra el input si el número no está en el rango
-    }
-
-    this.value = valor; // Asigna el valor limpio al input
-});
 
 
