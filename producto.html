@@ -3,18 +3,47 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Detalle del Producto</title>
-    <link rel="stylesheet" href="producto.css" />  <!-- Tu CSS externo -->
+    <title>Detalle del Producto | Tirux</title>
+    <link rel="stylesheet" href="producto.css" />
     <script src="catalogollantas.js?v=1.0.9"></script> 
     <script src="stockllantas.js?v=1.0.9"></script> 
-    
-    
-    
 </head>
 <body>
-    <div id="producto-detail">Cargando producto...</div>
 
-    <script src="producto.js?v=1.0.8"></script>  <!-- Tu JS externo que carga el producto -->
-    
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="productos/logo.png" alt="Tirux Logo" id="header-logo">
+                </a>
+            </div>
+
+           
+
+            <nav class="header-nav">
+                <a href="index.html" class="nav-link">Inicio</a>
+                
+                <a href="https://wa.me/927668906" target="_blank" class="btn-whatsapp">WhatsApp</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <nav class="breadcrumbs">
+            <a href="index.html">Catálogo</a> > <span id="breadcrumb-product">Cargando...</span>
+        </nav>
+
+        <div id="producto-detail">
+            <div class="loading-state">
+                <p>Buscando llanta en el inventario...</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 Tirux Llantas - Perú. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="producto.js?v=1.0.8"></script>
 </body>
 </html>

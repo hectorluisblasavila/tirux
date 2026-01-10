@@ -16,7 +16,7 @@
     background: var(--color-fondo);
     font-family: var(--font-base);
     color: var(--color-texto);
-    padding: 20px;
+    
   }
 
 
@@ -225,3 +225,133 @@
      appearance: none;
      margin: 0;
    }
+
+
+
+
+   /* --- VARIABLES DE COLOR (Estilo Tirux) --- */
+:root {
+    --primario: #ff4500;    /* Naranja vibrante */
+    --oscuro: #1a1a1a;      /* Negro mate */
+    --gris-fondo: #f4f4f4;
+    --blanco: #ffffff;
+    --texto: #333333;
+    --shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* --- RESET BÁSICO --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--gris-fondo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+/* --- HEADER --- */
+.main-header {
+    background-color: var(--oscuro);
+    color: var(--blanco);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 45px;
+    display: block;
+}
+
+
+
+
+/* Navegación */
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.header-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+
+.btn-whatsapp {
+    background-color: #25d366;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+/* --- CONTENEDOR DE PRODUCTO --- */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+.breadcrumbs {
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.breadcrumbs a {
+    color: var(--primario);
+    text-decoration: none;
+}
+
+
+
+
+
+/* --- FOOTER --- */
+.main-footer {
+    text-align: center;
+    padding: 3rem 0;
+    margin-top: 4rem;
+    background: var(--oscuro);
+    color: #888;
+}
+
+/* --- RESPONSIVO (Móviles) --- */
+@media (max-width: 768px) {
+    .header-container {
+        
+        gap: 1rem;
+    }
+    
+    .search-bar {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .producto-flex {
+        grid-template-columns: 1fr; /* Una sola columna en móvil */
+        padding: 1rem;
+    }
+
+    .col-info h1 {
+        font-size: 1.5rem;
+    }
+}
