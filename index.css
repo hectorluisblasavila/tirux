@@ -521,4 +521,22 @@ header label:hover{
 
 .btn-pag:hover:not(.activo) {
     background: #f0f0f0;
+
+}
+
+
+
+.btn-limpiar-estilo {
+    background-color: #666;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-limpiar-estilo:hover {
+    background-color: #ff4500; /* Naranja Tirux al pasar el mouse */
 }
