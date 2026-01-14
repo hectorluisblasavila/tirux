@@ -20,9 +20,10 @@ const tablaIV = {
 
 const stockllantas = [
 
- 
-    
 
+    
+    
+    
 
 {codigo:"1557012LINECO", Diametro:"12", marca:"LING LONG", modelo:"GREEN-MAX ECO TOURING", ancho:"155", Perfil:"70", PR:"12", PCD:"2", ET:"0", imagenes:["productos/1557012LINECO.webp","productos/1557012LINECO_2.webp","productos/1557012LINECO_3.webp","productos/1557012LINECO_4.webp","productos/1557012LINECO_5.webp"], cantidad:"2", precio:"125", IC_IV:"73S", alt:"Llanta LING LONG 155/70R12"},
 {codigo:"1656513LINECO", Diametro:"13", marca:"LINGLONG", modelo:"ECO GREEN-MAX", ancho:"165", Perfil:"65", PR:"", PCD:"4", ET:"0", imagenes:["productos/1656513LINECO.webp","productos/1656513LINECO_2.webp","productos/1656513LINECO_3.webp","productos/1656513LINECO_4.webp","productos/1656513LINECO_5.webp"], cantidad:"4", precio:"135", IC_IV:"77T", alt:"Llanta LINGLONG 165/65R13"},
@@ -51,7 +52,7 @@ const stockllantas = [
 {codigo:"19514CAUS01", Diametro:"14", marca:"AUSTONE", modelo:"SP-01", ancho:"195", Perfil:"", PR:"8", PCD:"0", ET:"4", imagenes:["productos/19514CAUS01.webp","productos/19514CAUS01_2.webp","productos/19514CAUS01_3.webp","productos/19514CAUS01_4.webp","productos/19514CAUS01_5.webp"], cantidad:"4", precio:"215", IC_IV:"106/104Q", alt:"Llanta AUSTONE 195R14C"},
 {codigo:"2056014ZEX655", Diametro:"14", marca:"ZEXTOUR", modelo:"COMFORT ES655", ancho:"205", Perfil:"60", PR:"", PCD:"2", ET:"0", imagenes:["productos/2056014ZEX655.webp","productos/2056014ZEX655_2.webp","productos/2056014ZEX655_3.webp","productos/2056014ZEX655_4.webp","productos/2056014ZEX655_5.webp"], cantidad:"2", precio:"170", IC_IV:"88H", alt:"Llanta ZEXTOUR 205/60R14"},
 {codigo:"2056014TRI978", Diametro:"14", marca:"TRIANGLE", modelo:"TR978", ancho:"205", Perfil:"60", PR:"", PCD:"0", ET:"0", imagenes:["productos/2056014TRI978.webp","productos/2056014TRI978_2.webp","productos/2056014TRI978_3.webp","productos/2056014TRI978_4.webp","productos/2056014TRI978_5.webp"], cantidad:"0", precio:"200", IC_IV:"88H", alt:"Llanta TRIANGLE 205/60R14"},
-{codigo:"1856515HILOGE", Diametro:"15", marca:"HILO", modelo:"GENESYS XP1", ancho:"185", Perfil:"65", PR:"", PCD:"4", ET:"1", imagenes:["productos/1856515HILOGE.webp","productos/1856515HILOGE_2.webp","productos/1856515HILOGE_3.webp","productos/1856515HILOGE_4.webp","productos/1856515HILOGE_5.webp"], cantidad:"5", precio:"165", IC_IV:"88H", alt:"Llanta HILO 185/65R15"},
+{codigo:"1856515HILOGE", Diametro:"15", marca:"HILO", modelo:"GENESYS XP1", ancho:"185", Perfil:"65", PR:"", PCD:"2", ET:"1", imagenes:["productos/1856515HILOGE.webp","productos/1856515HILOGE_2.webp","productos/1856515HILOGE_3.webp","productos/1856515HILOGE_4.webp","productos/1856515HILOGE_5.webp"], cantidad:"3", precio:"165", IC_IV:"88H", alt:"Llanta HILO 185/65R15"},
 {codigo:"1856515LIN300", Diametro:"15", marca:"LINGLONG", modelo:"GREEN-MAX HP300", ancho:"185", Perfil:"65", PR:"", PCD:"0", ET:"7", imagenes:["productos/1856515LIN300.webp","productos/1856515LIN300_2.webp","productos/1856515LIN300_3.webp","productos/1856515LIN300_4.webp","productos/1856515LIN300_5.webp"], cantidad:"7", precio:"165", IC_IV:"88H", alt:"Llanta LINGLONG 185/65R15"},
 {codigo:"1955015COMBL", Diametro:"15", marca:"COMPASAL ", modelo:"BLAZER", ancho:"195", Perfil:"50", PR:"", PCD:"2", ET:"0", imagenes:["productos/1955015COMBL.webp","productos/1955015COMBL_2.webp","productos/1955015COMBL_3.webp","productos/1955015COMBL_4.webp","productos/1955015COMBL_5.webp"], cantidad:"2", precio:"195", IC_IV:"82V", alt:"Llanta COMPASAL  195/50R15"},
 {codigo:"1956015TRIT3", Diametro:"15", marca:"TRIANGLE", modelo:"TE307", ancho:"195", Perfil:"60", PR:"", PCD:"2", ET:"0", imagenes:["productos/1956015TRIT3.webp","productos/1956015TRIT3_2.webp","productos/1956015TRIT3_3.webp","productos/1956015TRIT3_4.webp","productos/1956015TRIT3_5.webp"], cantidad:"2", precio:"195", IC_IV:"88V", alt:"Llanta TRIANGLE 195/60R15"},
@@ -81,6 +82,8 @@ const stockllantas = [
 {codigo:"2656517AUSMAS", Diametro:"17", marca:"AUSTONE MT", modelo:"MASPIRE", ancho:"265", Perfil:"65", PR:"10", PCD:"0", ET:"4", imagenes:["productos/2656517AUSMAS.webp","productos/2656517AUSMAS_2.webp","productos/2656517AUSMAS_3.webp","productos/2656517AUSMAS_4.webp","productos/2656517AUSMAS_5.webp"], cantidad:"4", precio:"420", IC_IV:"120/117Q", alt:"Llanta AUSTONE MT 265/65R17"},
 {codigo:"2657017COM300", Diametro:"17", marca:"COMFORSER MT", modelo:"MASPIRE", ancho:"265", Perfil:"70", PR:"10", PCD:"0", ET:"0", imagenes:["productos/2657017COM300.webp","productos/2657017COM300_2.webp","productos/2657017COM300_3.webp","productos/2657017COM300_4.webp","productos/2657017COM300_5.webp"], cantidad:"0", precio:"440", IC_IV:"120/117Q", alt:"Llanta COMFORSER MT 265/70R17"},
 {codigo:"2254518ANN606", Diametro:"18", marca:"ANNAITE", modelo:"AN606", ancho:"225", Perfil:"45", PR:"", PCD:"1", ET:"0", imagenes:["productos/2254518ANN606.webp","productos/2254518ANN606_2.webp","productos/2254518ANN606_3.webp","productos/2254518ANN606_4.webp","productos/2254518ANN606_5.webp"], cantidad:"1", precio:"280", IC_IV:"95W", alt:"Llanta ANNAITE 225/45R18"},
+
+
 
 
 
