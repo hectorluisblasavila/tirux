@@ -44,21 +44,38 @@ function renderizarPagina(pagina) {
         div.setAttribute('data-diametro', producto.Diametro);
         div.setAttribute('data-marca', producto.marca.toUpperCase());
 
-        div.innerHTML = `
-            <a href="producto.html?id=${producto.codigo}" class="boton-ver"> 
-                <img class="imagen" src="${producto.imagenes[0]}" alt="${producto.alt}">
-                <h3 class="titulop info"><strong>${producto.ancho}/${producto.Perfil}R${producto.Diametro} ${producto.IC_IV}</strong></h3>
-                <h6 class="info"><strong>${producto.marca}</strong></h6>
-                <p class="info">${producto.modelo}</p>         
-                <h3 class="info precio-destacado"><strong>PRECIO: S/.${producto.precio}</strong></h3> 
-                <p class="info"><strong>Stock: </strong>${producto.cantidad}</p>
-            </a>
-            <p class="precioProductoAfiliado info">Afiliado: S/.${Math.round(producto.precio * 0.95 / 5) * 5}</p>
-            <p class="info">Codigo: ${producto.codigo}</p>
-            <span class="info">Comprar:</span>
-            <input type="number" class="quantity-input" value="1" min="1">
-            <button class="boton-agregar">WhatsApp</button>
-        `;
+       // Definimos el aviso solo si la cantidad es 0
+const agotadoHTML = producto.cantidad === 0 
+    ? `<div class="badge-agotado">AGOTADO</div>` 
+    : '';
+
+// 1. Verificamos si la cantidad es CERO (convertimos a número por seguridad)
+const esAgotado = Number(producto.cantidad) === 0;
+
+// 2. Definimos qué mostrar
+const badgeAgotado = esAgotado ? '<div class="badge-agotado">AGOTADO</div>' : '';
+const claseExtraImagen = esAgotado ? 'imagen-agotada' : '';
+
+// 3. Insertamos el HTML (Fíjate en el contenedor-imagen que envuelve la imagen)
+div.innerHTML = `
+    <a href="producto.html?id=${producto.codigo}" class="boton-ver"> 
+        <div class="contenedor-imagen">
+            ${badgeAgotado}
+            <img class="imagen ${claseExtraImagen}" src="${producto.imagenes[0]}" alt="${producto.alt}">
+        </div>
+        
+        <h3 class="titulop info"><strong>${producto.ancho}/${producto.Perfil}R${producto.Diametro} ${producto.IC_IV}</strong></h3>
+        <h6 class="info"><strong>${producto.marca}</strong></h6>
+        <p class="info">${producto.modelo}</p>         
+        <h3 class="info precio-destacado"><strong>PRECIO: S/.${producto.precio}</strong></h3> 
+        <p class="info"><strong>Stock: </strong>${producto.cantidad}</p>
+    </a>
+    <p class="precioProductoAfiliado info">Afiliado: S/.${Math.round(producto.precio * 0.95 / 5) * 5}</p>
+    <p class="info">Codigo: ${producto.codigo}</p>
+    <span class="info">Comprar:</span>
+    <input type="number" class="quantity-input" value="1" min="1">
+    <button class="boton-agregar">WhatsApp</button>
+`;
 
                // --- EVENTO WHATSAPP ---
 

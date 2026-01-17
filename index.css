@@ -539,3 +539,34 @@ header label:hover{
 .btn-limpiar-estilo:hover {
     background-color: #ff4500; /* Naranja Tirux al pasar el mouse */
 }
+
+
+
+/* Esto es vital para que el texto NO flote por toda la página */
+.contenedor-imagen {
+    position: relative !important;
+    display: inline-block;
+    width: 100%;
+}
+
+.badge-agotado {
+    position: absolute !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 0, 0, 0.85); /* Rojo fuerte */
+    color: white !important;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 100; /* Asegura que esté arriba de todo */
+    border-radius: 4px;
+    pointer-events: none; /* Permite hacer clic a través del texto */
+    text-align: center;
+}
+
+/* Opcional: que la imagen se vea gris */
+.imagen-agotada {
+    filter: grayscale(100%);
+    opacity: 0.6;
+}
