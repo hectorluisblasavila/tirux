@@ -62,7 +62,10 @@ div.innerHTML = `
         <div class="contenedor-imagen">
             ${badgeAgotado}
             <img class="imagen ${claseExtraImagen}" src="${producto.imagenes[0]}" alt="${producto.alt}">
-        </div>
+        <div class="burbuja-stock b-izquierda">T: ${producto.Tirux}</div>
+            
+            <div class="burbuja-stock b-derecha">L: ${producto.LlantasLarco}</div>
+            </div>
         
         <h3 class="titulop info"><strong>${producto.ancho}/${producto.Perfil}R${producto.Diametro} ${producto.IC_IV}</strong></h3>
         <h6 class="info"><strong>${producto.marca}</strong></h6>
