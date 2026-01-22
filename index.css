@@ -616,3 +616,43 @@ header label:hover{
     background-color: #e42320; /* Naranja para Proveedor */
 }
 
+
+
+
+
+/* Contenedor de la moneda */
+.moneda-comision {
+    position: absolute;
+    bottom: 10px;    /* Distancia desde abajo */
+    right: 10px;     /* Distancia desde la derecha */
+    width: 45px;     /* Tamaño del círculo */
+    height: 45px;
+    background: linear-gradient(135deg, #ffdc1a 0%, #d4af37 100%); /* Degradado dorado */
+    border: 2px solid #b8860b; /* Borde color oro viejo */
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #5c4000;  /* Texto marrón oscuro para contraste */
+    font-weight: bold;
+    font-size: 13px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.4), inset -1px -1px 2px rgba(255,255,255,0.5);
+    z-index: 1000;
+    line-height: 1;
+    pointer-events: none;
+}
+
+/* Símbolo S/ pequeño arriba del monto */
+.simbolo-moneda {
+    font-size: 9px;
+    margin-bottom: 2px;
+}
+
+/* Estilo para los logos de las burbujas superiores (opcional) */
+.logo-mini {
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    margin-right: 4px;
+}

@@ -65,12 +65,18 @@ div.innerHTML = `
         <div class="burbuja-stock b-izquierda">T: ${producto.Tirux}</div>
             
             <div class="burbuja-stock b-derecha">L: ${producto.LlantasLarco}</div>
+             <div class="moneda-comision" title="Tu comisión">
+                <span class="simbolo-moneda">S/</span>${producto.comision}
             </div>
+            
+            </div>
+           
         
         <h3 class="titulop info"><strong>${producto.ancho}/${producto.Perfil}R${producto.Diametro} ${producto.IC_IV}</strong></h3>
         <h6 class="info"><strong>${producto.marca}</strong></h6>
         <p class="info">${producto.modelo}</p>         
         <h3 class="info precio-destacado"><strong>PRECIO: S/.${producto.precio}</strong></h3> 
+        <p class="info"><strong>P. Minimo: S/.</strong>${producto.pMinimo}</p>
         <p class="info"><strong>Stock: </strong>${producto.cantidad}</p>
     </a>
     <p class="precioProductoAfiliado info">Afiliado: S/.${Math.round(producto.precio * 0.95 / 5) * 5}</p>
