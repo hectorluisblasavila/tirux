@@ -62,11 +62,11 @@ div.innerHTML = `
         <div class="contenedor-imagen">
             ${badgeAgotado}
             <img class="imagen ${claseExtraImagen}" src="${producto.imagenes[0]}" alt="${producto.alt}">
-        <div class="burbuja-stock b-izquierda">T: ${producto.Tirux}</div>
+        <div class="burbuja-stock b-izquierda precioProductoAfiliado">T: ${producto.Tirux}</div>
             
-            <div class="burbuja-stock b-derecha">L: ${producto.LlantasLarco}</div>
-             <div class="moneda-comision" title="Tu comisión">
-                <span class="simbolo-moneda">S/</span>${producto.comision}
+            <div class="burbuja-stock b-derecha precioProductoAfiliado">L: ${producto.LlantasLarco}</div>
+             <div class="moneda-comision " title="Tu comisión">
+                <span class="simbolo-moneda ">S/</span>${producto.comision}
             </div>
             
             </div>
@@ -76,11 +76,11 @@ div.innerHTML = `
         <h6 class="info"><strong>${producto.marca}</strong></h6>
         <p class="info">${producto.modelo}</p>         
         <h3 class="info precio-destacado"><strong>PRECIO: S/.${producto.precio}</strong></h3> 
-        <p class="info"><strong>P. Minimo: S/.</strong>${producto.pMinimo}</p>
+        <p class="info precioProductoAfiliado"><strong>P. Minimo: S/.</strong>${producto.pMinimo}</p>
         <p class="info"><strong>Stock: </strong>${producto.cantidad}</p>
     </a>
-    <p class="precioProductoAfiliado info">Afiliado: S/.${Math.round(producto.precio * 0.95 / 5) * 5}</p>
-    <p class="info">Codigo: ${producto.codigo}</p>
+    
+    <p class="info precioProductoAfiliado">Codigo: ${producto.codigo}</p>
     <span class="info">Comprar:</span>
     <input type="number" class="quantity-input" value="1" min="1">
     <button class="boton-agregar">WhatsApp</button>

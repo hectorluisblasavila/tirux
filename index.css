@@ -311,12 +311,24 @@
     
 }
 
-.precioProductoAfiliado { /* Ocultamos los precios de los vendedores por defecto */
-    display: none;
-    color:#fb1313;
 
-    
-} 
+
+/* Ocultar por defecto */
+.precioProductoAfiliado, .moneda-comision {
+    display: none !important;
+}
+
+/* Mostrar cuando el vendedor está activo (Gestionado por el JS arriba) */
+body.vendedor-activo .precioProductoAfiliado {
+    display: block !important;
+}
+
+/* La moneda necesita flex para no deformarse */
+body.vendedor-activo .moneda-comision {
+    display: flex !important;
+}
+
+
 
 #contenedor-aros{
     margin: 1%;
