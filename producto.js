@@ -44,20 +44,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 <div class="info-detallada">
                     <div id="infoACopiar">
-                        <p><strong>Características:</strong></p>
-                        <p><strong>🔘 Diametro:</strong> ${productoSeleccionado.Diametro} pulgadas</p>
-                        <p><strong>📐 Ancho:</strong> ${productoSeleccionado.ancho} mm</p>
-                        <p><strong>📊 Perfil:</strong> ${productoSeleccionado.Perfil} %</p>
-                        <p><strong>🏷️ Marca:</strong> ${productoSeleccionado.marca}</p>
-                        <p><strong>🏁 Modelo:</strong> ${productoSeleccionado.modelo}</p>
-                        <p><strong>📈 IC/IV:</strong> ${productoSeleccionado.IC_IV}</p>
-                        <p><strong>Capacidad de Carga:</strong> ${textoCarga}</p>
-                        <p><strong>Rango de Velocidad:</strong> ${textoVelocidad}</p>
-                        <p><strong>PR:</strong> ${productoSeleccionado.PR}</p>
-                        <p>📦 Envíos a nivel nacional 🇵🇪</p>
-                        <p>💳 Aceptamos todos los medios de pago (efectivo, tarjeta, transferencias, Yape, Plin) ✅</p>
-                        <p>⏰ Atención las 24 horas del día, los 7 días de la semana, los 365 días del año</p>
-                        <p>📲 Escríbenos para más información o cotizar tu juego de llantas 💬</p>
+                        <p>
+                        <strong>Características:</strong></p>
+                        <p>
+                        <strong>🔘 Diámetro:</strong> ${productoSeleccionado.Diametro} pulgadas<br>
+                        <strong>📐 Ancho:</strong> ${productoSeleccionado.ancho} mm<br>
+                        <strong>📊 Perfil:</strong> ${productoSeleccionado.Perfil} %<br>
+                        <strong>🏷️ Marca:</strong> ${productoSeleccionado.marca}<br>
+                        <strong>🏁 Modelo:</strong> ${productoSeleccionado.modelo}<br>
+                        <strong>📈 IC/IV:</strong> ${productoSeleccionado.IC_IV}<br>
+                        <strong>Capacidad de Carga:</strong> ${textoCarga}<br>
+                        <strong>Rango de Velocidad:</strong> ${textoVelocidad}<br>
+                        <strong>PR:</strong> ${productoSeleccionado.PR}</p>
+                        <p>
+                        📦 Envíos a nivel nacional 🇵🇪<br>
+                        💳 Aceptamos todos los medios de pago (efectivo, tarjeta, transferencias, Yape, Plin) ✅<br>
+                        ⏰ Atención las 24 horas del día, los 7 días de la semana, los 365 días del año<br>
+                        📲 Escríbenos para más información o cotizar tu juego de llantas 💬</p>
                     </div>
 
                     <button class="btn-copiar" onclick="copiarCualquierTexto('infoACopiar')" title="Copiar Características">
