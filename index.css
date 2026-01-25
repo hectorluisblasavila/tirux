@@ -271,23 +271,33 @@
      margin: 0;
    }
 
-.boton-agregar{
-    padding: 5px;
-    margin-top: 5%;
-    margin-left: 30%;
-    margin-bottom: 5%;
-    border-radius: 10%;
-    background:#2a9d8f;
-    color: #fff;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-    opacity: .9;
-     cursor: pointer;
+.btn-whatsapp {
+    
+    display: inline-flex; /* Activa el alineado flexible */
+    align-items: center;  /* Centra verticalmente icono y texto */
+    justify-content: center; /* Centra horizontalmente */
+    margin: 5px 0px 5px 50px;
+    background-color: #25D366;
+    color: white;
+    border: none;
+    border-radius: 50px; /* O 50px si lo quieres tipo cápsula */
+    padding: 8px 8px;  /* Reducimos el padding para que el fondo no se vea gigante */
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+    line-height: 1;     /* Evita que el texto empuje el botón hacia abajo */
 }
 
-.boton-agregar:hover{
-    transition: all ease-in-out .25s;
-    opacity: 1;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.561);
+.btn-whatsapp svg {
+    width: 25px;  /* Tamaño controlado del logo */
+    height: 25px;
+    fill: white;  /* Asegura que el logo sea blanco */
+    display: block; /* Quita espacios fantasma debajo de imágenes */
+}
+
+.btn-whatsapp:hover {
+    background-color: #128C7E;
 }
 
 .info{
@@ -448,7 +458,7 @@ header label:hover{
 
 
     .main-footer {
-    background-color: #1a1a1a;
+    background-color: #004373;
     color: #ffffff;
     padding: 40px 0 20px 0;
     margin-top: 30px;
