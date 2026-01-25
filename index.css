@@ -280,7 +280,7 @@
     background-color: #25D366;
     color: white;
     border: none;
-    border-radius: 50px; /* O 50px si lo quieres tipo cápsula */
+    border-radius: 30px; /* O 50px si lo quieres tipo cápsula */
     padding: 8px 8px;  /* Reducimos el padding para que el fondo no se vea gigante */
     cursor: pointer;
     text-decoration: none;
