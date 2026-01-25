@@ -1,34 +1,40 @@
 const vendedores = [
-  { dni: "hectorblas", clave: "locotes" },
-  { dni: "vendedor", clave: "locotes" }
+  { dni: "hectorblas", clave: "locotes123", rol: "admin" }, // Administrador
+  { dni: "vendedor", clave: "locotes", rol: "vendedor" } // Vendedor normal
 ];
 
 // --- 1. LÓGICA DE SESIÓN Y VISTA ---
 
-// Función maestra que aplica o quita la visibilidad de vendedor
-function aplicarEstadoVendedor(estaLogueado) {
+function aplicarEstadoVendedor(estaLogueado, rol = "") {
   const formulario = document.querySelector(".vendedor");
   
+  // Limpiamos SIEMPRE las clases al iniciar la función para evitar residuos
+  document.body.classList.remove("vendedor-activo", "soy-admin");
+
   if (estaLogueado) {
-    // Añadimos la clase al body para que el CSS muestre todo (incluso filtros nuevos)
     document.body.classList.add("vendedor-activo");
+    
+    // Solo si el rol es estrictamente 'admin' se agrega la clase
+    if (rol === "admin") {
+      document.body.classList.add("soy-admin");
+    }
+
     if (formulario) formulario.style.display = "none";
   } else {
-    // Quitamos la clase y el acceso
-    document.body.classList.remove("vendedor-activo");
     localStorage.removeItem("usuarioAutenticado");
+    // Al cerrar sesión, el remove de arriba ya hizo el trabajo
   }
 }
 
-// Función para verificar si hay una sesión activa al cargar la página
+// También actualiza esta parte en tu verificarSesion:
 function verificarSesion() {
   const usuarioGuardado = localStorage.getItem("usuarioAutenticado");
   if (usuarioGuardado) {
-    aplicarEstadoVendedor(true);
+    const datos = JSON.parse(usuarioGuardado);
+    aplicarEstadoVendedor(true, datos.rol); // Enviamos el rol guardado
   }
 }
 
-// Función para validar el acceso del vendedor
 function validarAcceso() {
   const dniIngresado = document.getElementById("dni").value;
   const claveIngresada = document.getElementById("clave").value;
@@ -38,11 +44,13 @@ function validarAcceso() {
   );
 
   if (vendedorValido) {
-    alert("Acceso permitido. Mostrando información de vendedor.");
+    alert("Acceso permitido.");
     localStorage.setItem("usuarioAutenticado", JSON.stringify(vendedorValido));
-    aplicarEstadoVendedor(true);
+    
+    // AQUÍ ESTÁ EL TRUCO: Pasamos el rol del objeto encontrado
+    aplicarEstadoVendedor(true, vendedorValido.rol); 
   } else {
-    alert("DNI o clave incorrectos. Intenta nuevamente.");
+    alert("Usuario o clave incorrectos.");
   }
 }
 

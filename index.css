@@ -323,21 +323,6 @@
 
 
 
-/* Ocultar por defecto */
-.precioProductoAfiliado, .moneda-comision {
-    display: none !important;
-}
-
-/* Mostrar cuando el vendedor está activo (Gestionado por el JS arriba) */
-body.vendedor-activo .precioProductoAfiliado {
-    display: block !important;
-}
-
-/* La moneda necesita flex para no deformarse */
-body.vendedor-activo .moneda-comision {
-    display: flex !important;
-}
-
 
 
 #contenedor-aros{
@@ -677,5 +662,34 @@ header label:hover{
     height: 14px;
     vertical-align: middle;
     margin-right: 4px;
+}
 
+
+/* 1. ESTADO INICIAL: Todo oculto para visitantes */
+.precioProductoAfiliado, 
+.moneda-comision, 
+.solo-admin, 
+.calculadora-vendedor {
+    display: none !important;
+}
+
+/* 2. VISTA VENDEDOR: Muestra todo lo de ventas */
+body.vendedor-activo .precioProductoAfiliado,
+body.vendedor-activo .calculadora-vendedor {
+    display: block !important;
+}
+body.vendedor-activo .moneda-comision {
+    display: flex !important;
+}
+
+/* 3. VISTA ADMINISTRADOR (Héctor): Limpieza total */
+body.soy-admin .solo-admin {
+    display: block !important; /* Muestra el P. Costo */
+}
+
+
+
+/* Pero permitimos que el Admin sí vea los stocks y precios mínimos */
+body.soy-admin .precioProductoAfiliado {
+    display: block !important;
 }
