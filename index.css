@@ -276,7 +276,7 @@
     display: inline-flex; /* Activa el alineado flexible */
     align-items: center;  /* Centra verticalmente icono y texto */
     justify-content: center; /* Centra horizontalmente */
-    margin: 5px 0px 5px 50px;
+    margin: 5px 0px 5px 30px;
     background-color: #25D366;
     color: white;
     border: none;
@@ -677,4 +677,5 @@ header label:hover{
     height: 14px;
     vertical-align: middle;
     margin-right: 4px;
+
 }
