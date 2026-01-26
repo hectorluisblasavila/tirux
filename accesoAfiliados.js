@@ -1,5 +1,5 @@
 const vendedores = [
-  { dni: "hectorblas", clave: "locotes123", rol: "admin" }, // Administrador
+  { dni: "admin", clave: "adm123", rol: "admin" }, // Administrador
   { dni: "vendedor", clave: "locotes", rol: "vendedor" } // Vendedor normal
 ];
 
