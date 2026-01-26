@@ -263,8 +263,8 @@
 }
 
 .btn-cantidad {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border: 1px solid #004373;
     background-color: #f8f9fa;
     color: #004373;
@@ -287,8 +287,8 @@
 }
 
 .quantity-input {
-    width: 55px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     text-align: center;
     font-size: 16px; /* Evita zoom automático en iPhone */
     border: 1px solid #ccc;
@@ -312,7 +312,7 @@
     /* CENTRADO CLAVE */
     margin: 10px auto;      /* 10px arriba/abajo y AUTO a los lados centra el bloque */
     width: fit-content;     /* El botón se ajusta a su texto, permitiendo que 'auto' funcione */
-    min-width: 180px;       /* Opcional: le da un tamaño base bonito */
+          /* Opcional: le da un tamaño base bonito */
 
     background-color: #25D366;
     color: white;
