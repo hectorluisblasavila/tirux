@@ -293,7 +293,7 @@
     font-size: 16px; /* Evita zoom automático en iPhone */
     border: 1px solid #ccc;
     border-radius: 4px;
-    -moz-appearance: textfield; /* Quita flechas en Firefox */
+   
 }
 
 /* Quita flechas nativas en Chrome/Safari */
@@ -730,12 +730,33 @@ body.soy-admin .solo-admin {
     display: block !important; /* Muestra el P. Costo */
 }
 
-
-
 /* Pero permitimos que el Admin sí vea los stocks y precios mínimos */
 body.soy-admin .precioProductoAfiliado {
     display: block !important;
 }
+
+
+/* 4. VISTA PLATA: Hereda del vendedor pero puedes personalizarla */
+body.soy-plata .precioProductoAfiliado,
+body.soy-plata .calculadora-vendedor {
+    display: none !important;
+}
+
+body.soy-plata .moneda-comision {
+    display: none !important;
+}
+
+/* Aseguramos que el Plata NO vea lo que es solo para Admin */
+body.soy-plata .solo-admin {
+    display: none !important;
+}
+
+body.soy-plata .pminimo,
+body.soy-plata .locales{
+
+display: block !important;
+}
+
 
 
 

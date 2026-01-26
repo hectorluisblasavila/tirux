@@ -62,9 +62,9 @@ div.innerHTML = `
         <div class="contenedor-imagen">
             ${badgeAgotado}
             <img class="imagen ${claseExtraImagen}" src="${producto.imagenes[0]}" alt="${producto.alt}">
-        <div class="burbuja-stock b-izquierda precioProductoAfiliado">T: ${producto.Tirux}</div>
+        <div class="burbuja-stock b-izquierda precioProductoAfiliado locales">T: ${producto.Tirux}</div>
             
-            <div class="burbuja-stock b-derecha precioProductoAfiliado">L: ${producto.LlantasLarco}</div>
+            <div class="burbuja-stock b-derecha precioProductoAfiliado locales">L: ${producto.LlantasLarco}</div>
              <div class="moneda-comision " title="Tu comisión">
                 <span class="simbolo-moneda ">S/</span>${producto.comision}
             </div>
@@ -76,7 +76,7 @@ div.innerHTML = `
         <h6 class="info"><strong>${producto.marca}</strong></h6>
         <p class="info">${producto.modelo}</p>         
         <h3 class="info precio-destacado"><strong>PRECIO: S/.${producto.precio}</strong></h3> 
-        <p class="info precioProductoAfiliado"><strong>P. Minimo: S/.</strong>${producto.pMinimo}</p>
+        <p class="info precioProductoAfiliado pminimo"><strong>P. Minimo: S/.</strong>${producto.pMinimo}</p>
         <p class="info solo-admin"> <strong>P. Costo: S/. </strong>${Math.ceil(parseFloat(String(producto.costo).replace(',', '.')) || 0)}</p>
         <p class="info"><strong>Stock: </strong>${producto.cantidad}</p>
    
@@ -94,18 +94,7 @@ div.innerHTML = `
         <button type="button" class="btn-cantidad">+</button>
     </div>
 
-    <div class="calculadora-vendedor">
-        <hr>
-        <label style="font-size: 11px; font-weight: bold; display: block; margin-bottom: 5px;">Simulador de Ganancia:</label>
-        <input type="number" 
-               class="input-venta-simulador" 
-               placeholder="S/ Precio venta" 
-               data-costo="${producto.costo}">
-        
-        <p class="comision-label">
-            Tu Comisión: <span class="comision-monto">S/ <span class="comision-span">0.00</span></span>
-        </p>
-    </div>
+    
 
 </div>
 
@@ -271,7 +260,7 @@ function actualizarControlesPaginacion() {
 }
 
 /**
- * Lógica del Botón Flotante
+ Lógica del Botón Flotante
  */
 const configurarBotonFlotante = () => {
     const botonFlotante = document.getElementById('boton-flotante');
@@ -378,3 +367,19 @@ document.addEventListener('click', function (e) {
         input.dispatchEvent(new Event('input', { bubbles: true }));
     }
 });
+
+
+/*
+<div class="calculadora-vendedor">
+        <hr>
+        <label style="font-size: 11px; font-weight: bold; display: block; margin-bottom: 5px;">Simulador de Ganancia:</label>
+        <input type="number" 
+               class="input-venta-simulador" 
+               placeholder="S/ Precio venta" 
+               data-costo="${producto.costo}">
+        
+        <p class="comision-label">
+            Tu Comisión: <span class="comision-monto">S/ <span class="comision-span">0.00</span></span>
+        </p>
+    </div>*/
+    

@@ -1,6 +1,7 @@
 const vendedores = [
-  { dni: "admin", clave: "adm123", rol: "admin" }, // Administrador
-  { dni: "vendedor", clave: "locotes", rol: "vendedor" } // Vendedor normal
+  { dni: "Admin", clave: "adm123", rol: "admin" },
+  { dni: "Plata", clave: "plata123", rol: "plata" }, // <--- El rol ya existe aquí
+  { dni: "vendedor", clave: "locotes", rol: "vendedor" }
 ];
 
 // --- 1. LÓGICA DE SESIÓN Y VISTA ---
@@ -8,21 +9,22 @@ const vendedores = [
 function aplicarEstadoVendedor(estaLogueado, rol = "") {
   const formulario = document.querySelector(".vendedor");
   
-  // Limpiamos SIEMPRE las clases al iniciar la función para evitar residuos
-  document.body.classList.remove("vendedor-activo", "soy-admin");
+  // Limpiamos las clases incluyendo ahora la de nivel plata
+  document.body.classList.remove("vendedor-activo", "soy-admin", "soy-plata");
 
   if (estaLogueado) {
     document.body.classList.add("vendedor-activo");
     
-    // Solo si el rol es estrictamente 'admin' se agrega la clase
+    // Filtramos por el rol específico del array
     if (rol === "admin") {
       document.body.classList.add("soy-admin");
+    } else if (rol === "plata") {
+      document.body.classList.add("soy-plata"); // <--- Nueva clase para beneficios plata
     }
 
     if (formulario) formulario.style.display = "none";
   } else {
     localStorage.removeItem("usuarioAutenticado");
-    // Al cerrar sesión, el remove de arriba ya hizo el trabajo
   }
 }
 
