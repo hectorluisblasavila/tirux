@@ -84,57 +84,43 @@ div.innerHTML = `
     <p class="info solo-admin ">Codigo: ${producto.codigo}</p>
 
 
-<div class="calculadora-vendedor" onclick="event.preventDefault();">
-    <hr>
-    <label style="font-size: 11px; font-weight: bold;">Simulador de Ganancia:</label>
-    <input type="number" 
-           placeholder="Ingresa precio venta" 
-           style="width: 90%; padding: 6px; border-radius: 4px; border: 1px solid #004373;"
-           oninput="
-               let v = Number(this.value); 
-               let c = Number('${producto.costo}'.replace(',', '.')); 
-               
-               // Buscamos el input de cantidad que está FUERA del div
-               // Primero intentamos buscarlo en el contenedor padre común
-               let contenedor = this.parentElement.parentElement; 
-               let inputCant = contenedor.querySelector('.quantity-input');
-               
-               let cant = (inputCant) ? Number(inputCant.value) : 1;
-               
-               let res = (v > c) ? ((v - c) * 0.2 * cant).toFixed(2) : '0.00';
-               this.nextElementSibling.querySelector('span').innerText = res;
-           ">
-    
-    <p style="margin-top: 5px; font-size: 13px;">
-        Tu Comisión: <strong style="color: #25D366;">S/ <span>0.00</span></strong>
-    </p>
+<div class="boton-ver"> <div class="control-cantidad">
+        <span class="info">Comprar:</span>
+        <button type="button" class="btn-cantidad">-</button>
+        <input type="number" 
+               class="quantity-input" 
+               value="1" 
+               data-stock="${producto.cantidad}">
+        <button type="button" class="btn-cantidad">+</button>
+    </div>
+
+    <div class="calculadora-vendedor">
+        <hr>
+        <label style="font-size: 11px; font-weight: bold; display: block; margin-bottom: 5px;">Simulador de Ganancia:</label>
+        <input type="number" 
+               class="input-venta-simulador" 
+               placeholder="S/ Precio venta" 
+               data-costo="${producto.costo}">
+        
+        <p class="comision-label">
+            Tu Comisión: <span class="comision-monto">S/ <span class="comision-span">0.00</span></span>
+        </p>
+    </div>
+
 </div>
 
-<span class="info">Comprar:</span>
-<input type="number" 
-       class="quantity-input" 
-       value="1" 
-       min="1" 
-       max="${producto.cantidad > 0 ? producto.cantidad : 1}"
-       oninput="
-           /* 1. Definimos el límite: Si hay stock usamos ese número, si no, usamos 1 */
-           let stockReal = Number('${producto.cantidad}');
-           let limiteSuperior = stockReal > 0 ? stockReal : 1;
 
-           /* 2. Validamos que no sea vacío o menor a 1 */
-           if (this.value < 1 || this.value === '') this.value = 1;
 
-           /* 3. Validamos que no supere el stock disponible (siempre que haya stock) */
-           if (Number(this.value) > limiteSuperior) this.value = limiteSuperior;
 
-           /* 4. Disparamos el cálculo de la calculadora */
-           this.parentElement.querySelector('.calculadora-vendedor input').dispatchEvent(new Event('input'));
-       ">
+
+
     <button class="boton-agregar btn-whatsapp">
+    
+    <span>COMPRAR:</span>
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#ffffff">
         <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.463 1.065 2.876 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
     </svg>
-    <span></span> </button>
+     </button>
 `;
 
                // --- EVENTO WHATSAPP ---
@@ -332,3 +318,63 @@ if (inputDiametro) {
 }
 
 
+
+
+
+document.addEventListener('input', function (e) {
+    // 1. Lógica para el Input de Precio (Simulador)
+    if (e.target.classList.contains('input-venta-simulador')) {
+        const card = e.target.closest('.boton-ver');
+        const precioVenta = Number(e.target.value);
+        const costo = Number(e.target.dataset.costo.replace(',', '.'));
+        
+        // Obtener cantidad actual
+        const inputCant = card.querySelector('.quantity-input');
+        const cantidad = inputCant ? Number(inputCant.value) : 1;
+
+        // Calcular comisión (20% del margen)
+        const resultado = (precioVenta > costo) ? ((precioVenta - costo) * 0.2 * cantidad).toFixed(2) : '0.00';
+        
+        // Mostrar resultado
+        card.querySelector('.comision-span').innerText = resultado;
+    }
+
+    // 2. Lógica para el Input de Cantidad
+    if (e.target.classList.contains('quantity-input')) {
+        const card = e.target.closest('.boton-ver');
+        const stockReal = Number(e.target.dataset.stock);
+        const limite = stockReal > 0 ? stockReal : 1;
+
+        // Validaciones de cantidad
+        if (e.target.value !== '' && Number(e.target.value) < 1) e.target.value = 1;
+        if (Number(e.target.value) > limite) e.target.value = limite;
+
+        // Avisar a la calculadora para que actualice el total
+        const inputPrecio = card.querySelector('.input-venta-simulador');
+        if (inputPrecio && inputPrecio.value !== '') {
+            // Re-disparamos el evento de forma controlada para la calculadora
+            const event = new Event('input', { bubbles: true });
+            inputPrecio.dispatchEvent(event);
+        }
+    }
+});
+
+// 3. Lógica para los botones [+] y [-]
+document.addEventListener('click', function (e) {
+    if (e.target.classList.contains('btn-cantidad')) {
+        const isMas = e.target.innerText === '+';
+        const input = isMas ? e.target.previousElementSibling : e.target.nextElementSibling;
+        const stock = Number(input.dataset.stock);
+        const limite = stock > 0 ? stock : 1;
+        let valor = Number(input.value);
+
+        if (isMas && valor < limite) {
+            input.value = valor + 1;
+        } else if (!isMas && valor > 1) {
+            input.value = valor - 1;
+        }
+        
+        // Disparar evento input para activar la lógica de arriba
+        input.dispatchEvent(new Event('input', { bubbles: true }));
+    }
+});

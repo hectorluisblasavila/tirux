@@ -252,48 +252,89 @@
     box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.4);
 }
 
-.quantity-input {
-    width: 30px;
-    height: 20px;
-    font-size: 14px;    
-    color: #000000; /* Texto en azul */
-    background-color: #ffffff; /* Fondo blanco */
-    border: none; /* Borde azul */
-    border-radius: 5px; /* Bordes redondeados */
-    text-align: center; /* Texto centrado */
-    outline: none; /* Sin borde al hacer clic */
-    
-  }
+/* --- 2. SELECTOR DE CANTIDAD (TOUCH FRIENDLY) --- */
 
-  
-   /* Deshabilitar las flechas (para navegadores compatibles) 
-   input[type="number"]::-webkit-inner-spin-button,
-   input[type="number"]::-webkit-outer-spin-button {
-     appearance: none;
-     margin: 0;
-   }*/
+.control-cantidad {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 12px 0;
+    font-family: sans-serif;
+}
+
+.btn-cantidad {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #004373;
+    background-color: #f8f9fa;
+    color: #004373;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+    touch-action: manipulation;
+}
+
+.btn-cantidad:active {
+    background-color: #004373;
+    color: white;
+    transform: scale(0.95);
+}
+
+.quantity-input {
+    width: 55px;
+    height: 40px;
+    text-align: center;
+    font-size: 16px; /* Evita zoom automático en iPhone */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -moz-appearance: textfield; /* Quita flechas en Firefox */
+}
+
+/* Quita flechas nativas en Chrome/Safari */
+.quantity-input::-webkit-outer-spin-button,
+.quantity-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 
 .btn-whatsapp {
+    display: flex;          /* Cambiamos a flex para control total */
+    align-items: center;    /* Centra icono y texto verticalmente */
+    justify-content: center; /* Centra el contenido internamente */
     
-    display: inline-flex; /* Activa el alineado flexible */
-    align-items: center;  /* Centra verticalmente icono y texto */
-    justify-content: center; /* Centra horizontalmente */
-    margin: 5px 0px 5px 30px;
+    /* CENTRADO CLAVE */
+    margin: 10px auto;      /* 10px arriba/abajo y AUTO a los lados centra el bloque */
+    width: fit-content;     /* El botón se ajusta a su texto, permitiendo que 'auto' funcione */
+    min-width: 180px;       /* Opcional: le da un tamaño base bonito */
+
     background-color: #25D366;
     color: white;
     border: none;
-    border-radius: 30px; /* O 50px si lo quieres tipo cápsula */
-    padding: 8px 8px;  /* Reducimos el padding para que el fondo no se vea gigante */
+    border-radius: 30px;
+    padding: 10px 20px;     /* Padding equilibrado para forma de cápsula */
     cursor: pointer;
     text-decoration: none;
     font-weight: 600;
-    transition: background 0.3s;
-    line-height: 1;     /* Evita que el texto empuje el botón hacia abajo */
+    transition: background 0.3s, transform 0.2s;
+    line-height: 1;
+}
+
+.btn-whatsapp:active {
+    transform: scale(0.98); /* Feedback visual al tocar en celular */
+    background-color: #128C7E;
 }
 
 .btn-whatsapp svg {
     width: 25px;  /* Tamaño controlado del logo */
     height: 25px;
+    margin-left: 10px;
     fill: white;  /* Asegura que el logo sea blanco */
     display: block; /* Quita espacios fantasma debajo de imágenes */
 }
@@ -694,4 +735,42 @@ body.soy-admin .solo-admin {
 /* Pero permitimos que el Admin sí vea los stocks y precios mínimos */
 body.soy-admin .precioProductoAfiliado {
     display: block !important;
+}
+
+
+
+/* --- 3. DISEÑO DE LA CALCULADORA --- */
+
+.calculadora-vendedor {
+    background-color: #fdfdfd;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px dashed #004373;
+    margin-top: 10px;
+}
+
+.input-venta-simulador {
+    width: 100%;
+    max-width: 200px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #004373;
+    font-size: 14px;
+    outline: none;
+}
+
+.input-venta-simulador:focus {
+    box-shadow: 0 0 5px rgba(0, 67, 115, 0.3);
+}
+
+.comision-label {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #333;
+}
+
+.comision-monto {
+    color: #25D366;
+    font-weight: bold;
+    font-size: 15px;
 }
