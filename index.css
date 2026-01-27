@@ -810,14 +810,14 @@ body.soy-admin2 .calculadora-vendedor {
 body.soy-admin2::after {
     content: "";
     position: fixed;
-    bottom: 15px;
-    right: 15px;
-    width: 120px;
-    height: 120px;
+    bottom: -57px;
+    right: -35px;
+    width: 150px;
+    height: 150px;
     background-image: url('https://i.pinimg.com/originals/c5/24/8e/c5248ed334ed6965c2167910024da02d.gif');
     background-size: contain;
     background-repeat: no-repeat;
-    z-index: 9999;
+    z-index: 3;
     pointer-events: none;
     opacity: 0.9; /* Un poco de transparencia para que sea menos invasivo */
 }
