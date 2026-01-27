@@ -1,25 +1,28 @@
 const vendedores = [
   { dni: "Admin", clave: "adm123", rol: "admin" },
-  { dni: "Plata", clave: "plata123", rol: "plata" }, // <--- El rol ya existe aquí
-  { dni: "vendedor", clave: "locotes", rol: "vendedor" }
+  { dni: "Plata", clave: "plata123", rol: "plata" },
+  { dni: "vendedor", clave: "locotes", rol: "vendedor" },
+  { dni: "Admin2", clave: "rosa123", rol: "admin2" } // <-- Nueva Admin
 ];
-
-// --- 1. LÓGICA DE SESIÓN Y VISTA ---
 
 function aplicarEstadoVendedor(estaLogueado, rol = "") {
   const formulario = document.querySelector(".vendedor");
   
-  // Limpiamos las clases incluyendo ahora la de nivel plata
-  document.body.classList.remove("vendedor-activo", "soy-admin", "soy-plata");
+  // Limpiamos TODAS las clases anteriores
+  document.body.classList.remove("vendedor-activo", "soy-admin", "soy-plata", "soy-admin2");
 
   if (estaLogueado) {
     document.body.classList.add("vendedor-activo");
     
-    // Filtramos por el rol específico del array
     if (rol === "admin") {
       document.body.classList.add("soy-admin");
+    } else if (rol === "admin2") {
+      document.body.classList.add("soy-admin2");
+      // OPCIONAL: Reproducir música al entrar
+      let audio = new Audio('url_de_tu_musica.mp3'); 
+      audio.play().catch(e => console.log("El navegador bloqueó el audio inicial"));
     } else if (rol === "plata") {
-      document.body.classList.add("soy-plata"); // <--- Nueva clase para beneficios plata
+      document.body.classList.add("soy-plata");
     }
 
     if (formulario) formulario.style.display = "none";

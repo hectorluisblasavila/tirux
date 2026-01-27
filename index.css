@@ -757,7 +757,70 @@ body.soy-plata .locales{
 display: block !important;
 }
 
+/* 5. VISTA ADMIN2 (Paleta Rosa Bebé & Pastel) */
 
+body.soy-admin2 {
+    /* Un fondo crema casi blanco para que no sature */
+    background-color: #FFF5F7 !important; 
+    color: #85586F; /* Texto en un tono uva suave para mejor lectura */
+}
+
+/* Botones y Encabezados: Rosa Pastel con bordes suaves */
+body.soy-admin2 button, 
+body.soy-admin2 .encabezado,
+body.soy-admin2 .fijo,
+body.soy-admin2 .main-footer {
+    background: linear-gradient(135deg, #FFD1DC, #FFC0CB) !important; /* Degradado rosa bebé */
+    border: 1px solid #F48FBA !important;
+    color: #6D4C51 !important; /* Texto café oscuro suave para contraste */
+    box-shadow: 0 4px 6px rgba(244, 143, 186, 0.2); /* Sombra rosadita */
+    border-radius: 8px; /* Bordes redondeados para suavizar */
+}
+
+/* Efecto Hover para que los botones reaccionen con elegancia */
+body.soy-admin2 button:hover {
+    background: #F48FBA !important;
+    color: white !important;
+    transition: 0.3s ease;
+}
+
+body.soy-admin2 .footer-col h3, 
+body.soy-admin2 .footer-col h4,
+.footer-col ul li a {
+    color: #6D4C51 !important;
+    margin-bottom: 20px;
+}
+
+/* Campos de entrada o calculadora */
+body.soy-admin2 input, 
+body.soy-admin2 .calculadora-vendedor {
+    background-color: white !important;
+    border: 2px solid #FFD1DC !important;
+    border-radius: 10px;
+}
+
+/* Mostrar elementos de Admin */
+body.soy-admin2 .solo-admin,
+body.soy-admin2 .precioProductoAfiliado,
+body.soy-admin2 .calculadora-vendedor {
+    display: block !important;
+}
+
+/* Ajuste del GIF interactivo (con un filtro sutil para que combine) */
+body.soy-admin2::after {
+    content: "";
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 120px;
+    height: 120px;
+    background-image: url('https://i.pinimg.com/originals/c5/24/8e/c5248ed334ed6965c2167910024da02d.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0.9; /* Un poco de transparencia para que sea menos invasivo */
+}
 
 
 /* --- 3. DISEÑO DE LA CALCULADORA --- */
