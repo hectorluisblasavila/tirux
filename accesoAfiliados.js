@@ -1,9 +1,4 @@
-const vendedores = [
-  { dni: "Admin", clave: "adm123", rol: "admin" },
-  { dni: "Plata", clave: "plata123", rol: "plata" },
-  { dni: "vendedor", clave: "locotes", rol: "vendedor" },
-  { dni: "Admin2", clave: "rosa123", rol: "admin2" } // <-- Nueva Admin
-];
+
 
 function aplicarEstadoVendedor(estaLogueado, rol = "") {
   const formulario = document.querySelector(".vendedor");
@@ -36,26 +31,44 @@ function verificarSesion() {
   const usuarioGuardado = localStorage.getItem("usuarioAutenticado");
   if (usuarioGuardado) {
     const datos = JSON.parse(usuarioGuardado);
-    aplicarEstadoVendedor(true, datos.rol); // Enviamos el rol guardado
+    // Aplicamos el rol que rescatamos del localStorage
+    aplicarEstadoVendedor(true, datos.rol);
   }
 }
 
-function validarAcceso() {
+async function validarAcceso() {
   const dniIngresado = document.getElementById("dni").value;
   const claveIngresada = document.getElementById("clave").value;
+  const urlScript = "https://script.google.com/macros/s/AKfycbyOIaDVZb9D08kOaBYp16XE0W6WyaAOpJKuAThWvsrrzOI53HS-6pfNOPu0KcaT1ERC9w/exec"; // <--- Pega aquí tu URL de implementación
 
-  const vendedorValido = vendedores.find(
-    (v) => v.dni === dniIngresado && v.clave === claveIngresada
-  );
+  // Mostramos un mensaje de espera
+  console.log("Verificando en la base de datos...");
 
-  if (vendedorValido) {
-    alert("Acceso permitido.");
-    localStorage.setItem("usuarioAutenticado", JSON.stringify(vendedorValido));
-    
-    // AQUÍ ESTÁ EL TRUCO: Pasamos el rol del objeto encontrado
-    aplicarEstadoVendedor(true, vendedorValido.rol); 
-  } else {
-    alert("Usuario o clave incorrectos.");
+  try {
+    const respuesta = await fetch(urlScript, {
+      method: "POST",
+      body: JSON.stringify({
+        accion: "login",
+        dni: dniIngresado,
+        clave: claveIngresada
+      })
+    });
+
+    const resultado = await respuesta.json();
+
+    if (resultado.status === "success") {
+      alert("Acceso permitido.");
+      
+      const datosUsuario = { dni: dniIngresado, rol: resultado.rol };
+      localStorage.setItem("usuarioAutenticado", JSON.stringify(datosUsuario));
+      
+      aplicarEstadoVendedor(true, resultado.rol);
+    } else {
+      alert("Usuario o clave incorrectos.");
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    alert("Error de conexión con la base de datos.");
   }
 }
 
@@ -94,3 +107,10 @@ document.addEventListener("click", (e) => {
 
 // Ejecutar verificación al cargar
 window.addEventListener("DOMContentLoaded", verificarSesion);
+
+
+// Al final de tu archivo JS
+document.querySelector("form").addEventListener("submit", (e) => {
+    e.preventDefault(); // Evita que la página se refresque
+    validarAcceso();
+});
