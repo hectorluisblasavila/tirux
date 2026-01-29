@@ -712,13 +712,14 @@ header label:hover{
 .precioProductoAfiliado, 
 .moneda-comision, 
 .solo-admin, 
-.calculadora-vendedor {
+.calculadora-vendedor{
     display: none !important;
 }
 
 /* 2. VISTA VENDEDOR: Muestra todo lo de ventas */
 body.vendedor-activo .precioProductoAfiliado,
-body.vendedor-activo .calculadora-vendedor {
+body.vendedor-activo .calculadora-vendedor
+ {
     display: block !important;
 }
 body.vendedor-activo .moneda-comision {
@@ -857,4 +858,63 @@ body.soy-admin2::after {
     color: #25D366;
     font-weight: bold;
     font-size: 15px;
+}
+
+
+/* busqueda rapida */
+/* Contenedor para centrar el buscador */
+.contenedor-busqueda-rapida {
+    display: flex !important; /* Forzamos el flex para centrar */
+    flex-direction: column;
+    align-items: center;    /* Centra el input y el label horizontalmente */
+    justify-content: center;
+    width: 100%;            /* Ocupa todo el ancho */
+    margin: 40px auto;      /* Margen arriba/abajo y auto a los lados */
+    text-align: center;     /* Centra el texto del label */
+}
+
+/* Estilo del Label (Profesional) */
+.contenedor-busqueda-rapida label {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* El Input de Búsqueda */
+.form-control-busqueda {
+    
+    width: 100%;
+    max-width: 500px; /* Ancho máximo para que no se estire demasiado en PC */
+    padding: 16px 25px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #2c3e50;
+    background-color: #ffffff;
+    border: 2px solid #e0e0e0; /* Gris suave por defecto */
+    border-radius: 50px; /* Bordes redondeados tipo Google */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    outline: none;
+    text-align: center; /* Números centrados */
+    letter-spacing: 3px; /* Espaciado entre dígitos */
+}
+
+/* Efecto al hacer clic o escribir */
+.form-control-busqueda:focus {
+    border-color: #ed1c24; /* El rojo de Tirux */
+    box-shadow: 0 15px 30px rgba(237, 28, 36, 0.15);
+    transform: translateY(-2px); /* Pequeña elevación */
+    background-color: #fff;
+}
+
+/* Placeholder elegante */
+.form-control-busqueda::placeholder {
+    color: #bdc3c7;
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: normal; /* El placeholder no lleva espaciado */
 }

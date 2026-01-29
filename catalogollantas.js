@@ -369,6 +369,48 @@ document.addEventListener('click', function (e) {
 });
 
 
+document.getElementById('busqueda-medida').addEventListener('input', function(e) {
+    let valor = e.target.value;
+    
+    const inputAncho = document.getElementById('ancho-llantas');
+    const inputPerfil = document.getElementById('perfil-llantas');
+    const inputDiametro = document.getElementById('buscar-llantas');
+
+    // Limpiar antes de procesar
+    inputAncho.value = "";
+    inputPerfil.value = "";
+    inputDiametro.value = "";
+
+    if (valor.length > 0) {
+        // 1. Siempre los primeros 3 son Ancho (Ej: 205...)
+        inputAncho.value = valor.substring(0, 3);
+
+        if (valor.length === 4) {
+            // Si solo hay 4 dígitos (Ej: 2055), no lo pongas en diámetro aún 
+            // para que no oculte todo. Solo filtra por Ancho.
+        } 
+        else if (valor.length === 5) {
+            // Si hay 5 dígitos (Ej: 19514), comprobamos si es una llanta SIN perfil
+            // Normalmente los diámetros son 13, 14, 15, 16, 17, 18, 20, 22.
+            let posibleDiametro = valor.substring(3, 5);
+            if (posibleDiametro >= 12 && posibleDiametro <= 24) {
+                inputDiametro.value = posibleDiametro;
+            } else {
+                // Si no parece un diámetro, lo tomamos como inicio de perfil
+                inputPerfil.value = posibleDiametro;
+            }
+        } 
+        else if (valor.length >= 6) {
+            // A partir de 6 dígitos ya es claro: Ancho + Perfil + Diámetro
+            inputPerfil.value = valor.substring(3, 5);
+            inputDiametro.value = valor.substring(5, 7);
+        }
+    }
+
+    // Ejecuta la búsqueda de tu catálogo
+    buscarllantas();
+});
+
 /*
 <div class="calculadora-vendedor">
         <hr>
