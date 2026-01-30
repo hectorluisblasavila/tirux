@@ -868,8 +868,8 @@ body.soy-admin2::after {
     flex-direction: column;
     align-items: center;    /* Centra el input y el label horizontalmente */
     justify-content: center;
-    width: 100%;            /* Ocupa todo el ancho */
-    margin: 40px auto;      /* Margen arriba/abajo y auto a los lados */
+    width: 50%;            /* Ocupa todo el ancho */
+    margin: 10px auto;      /* Margen arriba/abajo y auto a los lados */
     text-align: center;     /* Centra el texto del label */
 }
 
@@ -879,7 +879,7 @@ body.soy-admin2::after {
     font-weight: 600;
     color: #333;
     margin-bottom: 10px;
-    font-size: 0.9rem;
+    font-size: 0.6rem;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -889,7 +889,7 @@ body.soy-admin2::after {
     
     width: 100%;
     max-width: 500px; /* Ancho máximo para que no se estire demasiado en PC */
-    padding: 16px 25px;
+    padding: 5px 15px;
     font-size: 1.3rem;
     font-weight: 700;
     color: #2c3e50;
