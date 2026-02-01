@@ -39,10 +39,18 @@ function verificarSesion() {
 async function validarAcceso() {
   const dniIngresado = document.getElementById("dni").value;
   const claveIngresada = document.getElementById("clave").value;
-  const urlScript = "https://script.google.com/macros/s/AKfycbyOIaDVZb9D08kOaBYp16XE0W6WyaAOpJKuAThWvsrrzOI53HS-6pfNOPu0KcaT1ERC9w/exec"; // <--- Pega aquí tu URL de implementación
+  const urlScript = "https://script.google.com/macros/s/AKfycbyOIaDVZb9D08kOaBYp16XE0W6WyaAOpJKuAThWvsrrzOI53HS-6pfNOPu0KcaT1ERC9w/exec";
+  
+  // Referencia al loader
+  const loader = document.getElementById('loader-container'); // <--- NUEVO
 
-  // Mostramos un mensaje de espera
-  console.log("Verificando en la base de datos...");
+  if (dniIngresado === "" || claveIngresada === "") {
+    alert("Por favor, ingresa tus datos.");
+    return;
+  }
+
+  // 1. Mostrar el GIF de carga justo antes del fetch
+  if (loader) loader.style.display = 'flex'; // <--- NUEVO
 
   try {
     const respuesta = await fetch(urlScript, {
@@ -57,11 +65,9 @@ async function validarAcceso() {
     const resultado = await respuesta.json();
 
     if (resultado.status === "success") {
-      alert("Acceso permitido.");
-      
+      // 2. Si es exitoso, el loader se quita al aplicar el estado o redireccionar
       const datosUsuario = { dni: dniIngresado, rol: resultado.rol };
       localStorage.setItem("usuarioAutenticado", JSON.stringify(datosUsuario));
-      
       aplicarEstadoVendedor(true, resultado.rol);
     } else {
       alert("Usuario o clave incorrectos.");
@@ -69,6 +75,9 @@ async function validarAcceso() {
   } catch (error) {
     console.error("Error:", error);
     alert("Error de conexión con la base de datos.");
+  } finally {
+    // 3. Ocultar el loader SIEMPRE, ya sea que salga bien o mal
+    if (loader) loader.style.display = 'none'; // <--- NUEVO
   }
 }
 
