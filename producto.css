@@ -362,7 +362,7 @@ body {
 
 .nav-f-btn {
     position: fixed;
-    top: 50%;
+    top: 75%;
     transform: translateY(-50%);
     background: rgba(0, 0, 0, 0.4);
     color: white;
