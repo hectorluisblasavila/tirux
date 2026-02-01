@@ -43,6 +43,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 <div class="info-detallada">
                     <div id="infoACopiar">
+                    
+<button id="btn-compartir-social" class="btn-compartir-accion">
+    <span>📲 Compartir este modelo</span>
+</button>
                         <p><strong>Características:</strong></p>
                         <p>
                         <strong>🔘 Diámetro:</strong> ${productoSeleccionado.Diametro} pulgadas<br>
@@ -212,4 +216,37 @@ function actualizarMetatags(producto) {
         const el = document.querySelector(`meta[property="${prop}"]`);
         if (el) el.setAttribute("content", tags[prop]);
     }
+}
+
+
+
+
+/**
+ * Función para compartir en móviles o copiar link en PC
+ */
+async function compartirProducto(titulo, texto, url) {
+    const shareData = {
+        title: titulo,
+        text: texto,
+        url: url
+    };
+
+    try {
+        if (navigator.share) {
+            await navigator.share(shareData);
+        } else {
+            await navigator.clipboard.writeText(url);
+            alert("¡Enlace copiado! Ya puedes pegarlo en tus redes sociales.");
+        }
+    } catch (err) {
+        console.log("Error al compartir:", err);
+    }
+}
+
+// Función específica para los botones del INDEX
+function compartirDesdeIndex(marca, medida, codigo) {
+    const url = `https://hectorluisblasavila.github.io/tirux/producto.html?id=${codigo}`;
+    const titulo = `Llanta ${marca} ${medida}`;
+    const texto = `Mira esta llanta ${marca} en Tirux. ¡Calidad garantizada!`;
+    compartirProducto(titulo, texto, url);
 }
