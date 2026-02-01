@@ -191,6 +191,10 @@ const buscarllantas = () => {
                (textoPerfil === "" || coincidePerfil) && 
                (textoMarca === "" || coincideMarca);
     });
+// NUEVO: Guardar los códigos de los productos filtrados
+    const idsFiltrados = stockFiltrado.map(p => p.codigo);
+    sessionStorage.setItem('productos_filtrados', JSON.stringify(idsFiltrados));
+
 
     paginaActual = 1;
     renderizarPagina(paginaActual);

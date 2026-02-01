@@ -360,3 +360,18 @@ body {
 
 
 
+.nav-f-btn {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    padding: 20px 10px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1000;
+    border-radius: 8px;
+}
+#btn-prod-prev { left: 5px; }
+#btn-prod-next { right: 5px; }
