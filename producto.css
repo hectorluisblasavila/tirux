@@ -378,31 +378,3 @@ body {
 
 
 
-/* Estilo para el botón en el INDEX (pequeño y discreto) */
-.btn-compartir-index {
-    background: #f0f0f0;
-    border: none;
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
-    cursor: pointer;
-    margin-left: 10px;
-    transition: 0.3s;
-}
-
-/* Estilo para el botón en el DETALLE (grande y llamativo) */
-.btn-compartir-accion {
-    background-color: #2563eb; /* Azul corporativo */
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 8px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 15px;
-    cursor: pointer;
-    width: 100%;
-    justify-content: center;
-}
