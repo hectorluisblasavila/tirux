@@ -21,7 +21,6 @@ const tablaIV = {
 const stockllantas = [
 
 
-    
 {codigo:"1557012LINECO", Diametro:"12", marca:"LINGLONG", modelo:"GREEN-MAX ECO TOURING", ancho:"155", Perfil:"70", PR:"", PCD:"2", ET:"0", imagenes:["productos/1557012LINECO.webp","productos/1557012LINECO_2.webp","productos/1557012LINECO_3.webp","productos/1557012LINECO_4.webp","productos/1557012LINECO_5.webp","productos/1557012LINECO_6.webp"], cantidad:"2", precio:"125", pMinimo:"100", costo:"72", comision:"6", IC_IV:"73S", Tirux:"2", LlantasLarco:"0", alt:"Llanta LINGLONG 155/70R12"},
 {codigo:"1656513LINECO", Diametro:"13", marca:"LINGLONG", modelo:"ECO GREEN-MAX", ancho:"165", Perfil:"65", PR:"", PCD:"4", ET:"0", imagenes:["productos/1656513LINECO.webp","productos/1656513LINECO_2.webp","productos/1656513LINECO_3.webp","productos/1656513LINECO_4.webp","productos/1656513LINECO_5.webp","productos/1656513LINECO_6.webp"], cantidad:"4", precio:"135", pMinimo:"115", costo:"77,922", comision:"7,5", IC_IV:"77T", Tirux:"4", LlantasLarco:"0", alt:"Llanta LINGLONG 165/65R13"},
 {codigo:"1757013ONYN8", Diametro:"13", marca:"ONYX", modelo:"NY-806", ancho:"175", Perfil:"70", PR:"", PCD:"0", ET:"0", imagenes:["productos/1757013ONYN8.webp","productos/1757013ONYN8_2.webp","productos/1757013ONYN8_3.webp","productos/1757013ONYN8_4.webp","productos/1757013ONYN8_5.webp","productos/1757013ONYN8_6.webp"], cantidad:"0", precio:"145", pMinimo:"115", costo:"79,195", comision:"7,5", IC_IV:"82H", Tirux:"0", LlantasLarco:"0", alt:"Llanta ONYX 175/70R13"},
@@ -86,8 +85,8 @@ const stockllantas = [
 
 
 
-
 ];
+
 
 
 
