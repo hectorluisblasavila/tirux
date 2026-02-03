@@ -712,7 +712,8 @@ header label:hover{
 .precioProductoAfiliado, 
 .moneda-comision, 
 .solo-admin, 
-.calculadora-vendedor{
+.calculadora-vendedor,
+.contenedor-busqueda-rapida {
     display: none !important;
 }
 
@@ -726,9 +727,17 @@ body.vendedor-activo .moneda-comision {
     display: flex !important;
 }
 
+body.vendedor-activo .contenedor-busqueda-rapida {
+    display: flex !important;
+}
+
 /* 3. VISTA ADMINISTRADOR (Héctor): Limpieza total */
 body.soy-admin .solo-admin {
     display: block !important; /* Muestra el P. Costo */
+}
+
+body.soy-admin .contenedor-busqueda-rapida {
+    display: flex !important; /* Muestra el P. Costo */
 }
 
 /* Pero permitimos que el Admin sí vea los stocks y precios mínimos */
@@ -739,7 +748,8 @@ body.soy-admin .precioProductoAfiliado {
 
 /* 4. VISTA PLATA: Hereda del vendedor pero puedes personalizarla */
 body.soy-plata .precioProductoAfiliado,
-body.soy-plata .calculadora-vendedor {
+body.soy-plata .calculadora-vendedor,
+body.soy-plata .contenedor-busqueda-rapida {
     display: none !important;
 }
 
@@ -807,6 +817,11 @@ body.soy-admin2 .calculadora-vendedor {
     display: block !important;
 }
 
+body.soy-admin2 .contenedor-busqueda-rapida{
+    display: flex !important;
+
+}
+
 /* Ajuste del GIF interactivo (con un filtro sutil para que combine) */
 body.soy-admin2::after {
     content: "";
@@ -864,7 +879,7 @@ body.soy-admin2::after {
 /* busqueda rapida */
 /* Contenedor para centrar el buscador */
 .contenedor-busqueda-rapida {
-    display: flex !important; /* Forzamos el flex para centrar */
+    display: flex; /* Forzamos el flex para centrar */
     flex-direction: column;
     align-items: center;    /* Centra el input y el label horizontalmente */
     justify-content: center;
