@@ -21,8 +21,9 @@ const tablaIV = {
 const stockllantas = [
 
 
+
 {codigo:"1557012LINECO", Diametro:"12", marca:"LINGLONG", modelo:"GREEN-MAX ECO TOURING", ancho:"155", Perfil:"70", PR:"", PCD:"0", ET:"0", imagenes:["productos/1557012LINECO.webp","productos/1557012LINECO_2.webp","productos/1557012LINECO_3.webp","productos/1557012LINECO_4.webp","productos/1557012LINECO_5.webp","productos/1557012LINECO_6.webp"], cantidad:"0", precio:"125", pMinimo:"100", costo:"72", comision:"6", IC_IV:"73S", Tirux:"0", LlantasLarco:"0", alt:"Llanta LINGLONG 155/70R12"},
-{codigo:"1656513LINECO", Diametro:"13", marca:"LINGLONG", modelo:"ECO GREEN-MAX", ancho:"165", Perfil:"65", PR:"", PCD:"4", ET:"0", imagenes:["productos/1656513LINECO.webp","productos/1656513LINECO_2.webp","productos/1656513LINECO_3.webp","productos/1656513LINECO_4.webp","productos/1656513LINECO_5.webp","productos/1656513LINECO_6.webp"], cantidad:"4", precio:"135", pMinimo:"115", costo:"77,922", comision:"7,5", IC_IV:"77T", Tirux:"4", LlantasLarco:"0", alt:"Llanta LINGLONG 165/65R13"},
+{codigo:"1656513LINECO", Diametro:"13", marca:"LINGLONG", modelo:"ECO GREEN-MAX", ancho:"165", Perfil:"65", PR:"", PCD:"3", ET:"0", imagenes:["productos/1656513LINECO.webp","productos/1656513LINECO_2.webp","productos/1656513LINECO_3.webp","productos/1656513LINECO_4.webp","productos/1656513LINECO_5.webp","productos/1656513LINECO_6.webp"], cantidad:"3", precio:"135", pMinimo:"115", costo:"77,922", comision:"7,5", IC_IV:"77T", Tirux:"3", LlantasLarco:"0", alt:"Llanta LINGLONG 165/65R13"},
 {codigo:"1757013ONYN8", Diametro:"13", marca:"ONYX", modelo:"NY-806", ancho:"175", Perfil:"70", PR:"", PCD:"0", ET:"0", imagenes:["productos/1757013ONYN8.webp","productos/1757013ONYN8_2.webp","productos/1757013ONYN8_3.webp","productos/1757013ONYN8_4.webp","productos/1757013ONYN8_5.webp","productos/1757013ONYN8_6.webp"], cantidad:"0", precio:"145", pMinimo:"115", costo:"79,195", comision:"7,5", IC_IV:"82H", Tirux:"0", LlantasLarco:"0", alt:"Llanta ONYX 175/70R13"},
 {codigo:"1757013TRI928", Diametro:"13", marca:"TRIANGLE", modelo:"TR928", ancho:"175", Perfil:"70", PR:"", PCD:"0", ET:"1", imagenes:["productos/1757013TRI928.webp","productos/1757013TRI928_2.webp","productos/1757013TRI928_3.webp","productos/1757013TRI928_4.webp","productos/1757013TRI928_5.webp","productos/1757013TRI928_6.webp"], cantidad:"1", precio:"165", pMinimo:"145", costo:"110", comision:"7", IC_IV:"82H", Tirux:"0", LlantasLarco:"1", alt:"Llanta TRIANGLE 175/70R13"},
 {codigo:"1857013DOUMAX", Diametro:"13", marca:"DOUBLESTAR", modelo:"MAXIMUN", ancho:"185", Perfil:"70", PR:"", PCD:"0", ET:"0", imagenes:["productos/1857013DOUMAX.webp","productos/1857013DOUMAX_2.webp","productos/1857013DOUMAX_3.webp","productos/1857013DOUMAX_4.webp","productos/1857013DOUMAX_5.webp","productos/1857013DOUMAX_6.webp"], cantidad:"0", precio:"145", pMinimo:"125", costo:"93,015", comision:"6,5", IC_IV:"86T", Tirux:"0", LlantasLarco:"0", alt:"Llanta DOUBLESTAR 185/70R13"},
@@ -62,7 +63,7 @@ const stockllantas = [
 {codigo:"1956515TRI928", Diametro:"15", marca:"TRIANGLE", modelo:"TR928", ancho:"195", Perfil:"65", PR:"", PCD:"0", ET:"0", imagenes:["productos/1956515TRI928.webp","productos/1956515TRI928_2.webp","productos/1956515TRI928_3.webp","productos/1956515TRI928_4.webp","productos/1956515TRI928_5.webp","productos/1956515TRI928_6.webp"], cantidad:"0", precio:"205", pMinimo:"185", costo:"148", comision:"7,5", IC_IV:"91H", Tirux:"0", LlantasLarco:"0", alt:"Llanta TRIANGLE 195/65R15"},
 {codigo:"1957015ONY06", Diametro:"15", marca:"ONYX", modelo:"NY-06", ancho:"195", Perfil:"70", PR:"8", PCD:"0", ET:"4", imagenes:["productos/1957015ONY06.webp","productos/1957015ONY06_2.webp","productos/1957015ONY06_3.webp","productos/1957015ONY06_4.webp","productos/1957015ONY06_5.webp","productos/1957015ONY06_6.webp"], cantidad:"4", precio:"215", pMinimo:"195", costo:"151,455", comision:"9", IC_IV:"104/102R", Tirux:"0", LlantasLarco:"4", alt:"Llanta ONYX 195/70R15C"},
 {codigo:"2055015TRI918", Diametro:"15", marca:"TRIANGLE", modelo:"TR918", ancho:"205", Perfil:"50", PR:"", PCD:"0", ET:"0", imagenes:["productos/2055015TRI918.webp","productos/2055015TRI918_2.webp","productos/2055015TRI918_3.webp","productos/2055015TRI918_4.webp","productos/2055015TRI918_5.webp","productos/2055015TRI918_6.webp"], cantidad:"0", precio:"200", pMinimo:"180", costo:"137,9", comision:"8,5", IC_IV:"89V", Tirux:"0", LlantasLarco:"0", alt:"Llanta TRIANGLE 205/50R15"},
-{codigo:"2055515LINGHP10", Diametro:"15", marca:"LINGLONG", modelo:"GREEN-MAX HP010", ancho:"205", Perfil:"55", PR:"", PCD:"1", ET:"0", imagenes:["productos/2055515LINGHP10.webp","productos/2055515LINGHP10_2.webp","productos/2055515LINGHP10_3.webp","productos/2055515LINGHP10_4.webp","productos/2055515LINGHP10_5.webp","productos/2055515LINGHP10_6.webp"], cantidad:"1", precio:"185", pMinimo:"165", costo:"116", comision:"10", IC_IV:"88V", Tirux:"1", LlantasLarco:"0", alt:"Llanta LINGLONG 205/55R15"},
+{codigo:"2055515LINGHP10", Diametro:"15", marca:"LINGLONG", modelo:"GREEN-MAX HP010", ancho:"205", Perfil:"55", PR:"", PCD:"0", ET:"0", imagenes:["productos/2055515LINGHP10.webp","productos/2055515LINGHP10_2.webp","productos/2055515LINGHP10_3.webp","productos/2055515LINGHP10_4.webp","productos/2055515LINGHP10_5.webp","productos/2055515LINGHP10_6.webp"], cantidad:"0", precio:"185", pMinimo:"165", costo:"116", comision:"10", IC_IV:"88V", Tirux:"0", LlantasLarco:"0", alt:"Llanta LINGLONG 205/55R15"},
 {codigo:"2055515COMBLA", Diametro:"15", marca:"COMPASAL ", modelo:"BLAZER", ancho:"205", Perfil:"55", PR:"", PCD:"0", ET:"4", imagenes:["productos/2055515COMBLA.webp","productos/2055515COMBLA_2.webp","productos/2055515COMBLA_3.webp","productos/2055515COMBLA_4.webp","productos/2055515COMBLA_5.webp","productos/2055515COMBLA_6.webp"], cantidad:"4", precio:"195", pMinimo:"175", costo:"135", comision:"8", IC_IV:"88V", Tirux:"0", LlantasLarco:"4", alt:"Llanta COMPASAL  205/55R15"},
 {codigo:"2056015COM510", Diametro:"15", marca:"COMFORSER", modelo:"CF510", ancho:"205", Perfil:"60", PR:"", PCD:"0", ET:"1", imagenes:["productos/2056015COM510.webp","productos/2056015COM510_2.webp","productos/2056015COM510_3.webp","productos/2056015COM510_4.webp","productos/2056015COM510_5.webp","productos/2056015COM510_6.webp"], cantidad:"1", precio:"175", pMinimo:"155", costo:"108,33", comision:"9,5", IC_IV:"91V", Tirux:"0", LlantasLarco:"1", alt:"Llanta COMFORSER 205/60R15"},
 {codigo:"2157515DOUT01", Diametro:"15", marca:"DOUBLESTAR", modelo:"WILDTIGER T01", ancho:"215", Perfil:"75", PR:"8", PCD:"0", ET:"0", imagenes:["productos/2157515DOUT01.webp","productos/2157515DOUT01_2.webp","productos/2157515DOUT01_3.webp","productos/2157515DOUT01_4.webp","productos/2157515DOUT01_5.webp","productos/2157515DOUT01_6.webp"], cantidad:"0", precio:"330", pMinimo:"300", costo:"239,36", comision:"12,5", IC_IV:"106/103N", Tirux:"0", LlantasLarco:"0", alt:"Llanta DOUBLESTAR 215/75R15"},
@@ -84,23 +85,8 @@ const stockllantas = [
 {codigo:"2254518ANN606", Diametro:"18", marca:"ANNAITE", modelo:"AN606", ancho:"225", Perfil:"45", PR:"", PCD:"1", ET:"0", imagenes:["productos/2254518ANN606.webp","productos/2254518ANN606_2.webp","productos/2254518ANN606_3.webp","productos/2254518ANN606_4.webp","productos/2254518ANN606_5.webp","productos/2254518ANN606_6.webp"], cantidad:"1", precio:"280", pMinimo:"250", costo:"164,97", comision:"17,5", IC_IV:"95W", Tirux:"1", LlantasLarco:"0", alt:"Llanta ANNAITE 225/45R18"},
 
 
-    
-
 
 ];
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
