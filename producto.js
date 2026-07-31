@@ -54,6 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         <strong>📈 IC/IV:</strong> ${productoSeleccionado.IC_IV}<br>
                         <strong>Capacidad de Carga:</strong> ${textoCarga}<br>
                         <strong>Rango de Velocidad:</strong> ${textoVelocidad}<br>
+                        <strong>🚗 Treadwear:</strong> ${productoSeleccionado.treadwear}<br>
+                        <strong>🌧️ Tracción / Temperatura:</strong> ${productoSeleccionado.traction_temperature}<br>
+                        <strong>🌍 Procedencia:</strong> ${productoSeleccionado.procedencia}<br>
                         <strong>PR:</strong> ${productoSeleccionado.PR}</p>
                         <p>
                         📦 Envíos a nivel nacional 🇵🇪<br>
